@@ -1,0 +1,217 @@
+
+        :root {
+            --bg-color: #0d0015;
+            --neon-main: #bd00ff;
+            --neon-accent: #00f2ff;
+            --glass-bg: rgba(30, 0, 40, 0.6);
+            --grid-opacity: 0.15;
+        }
+
+        body.theme-matrix {
+            --bg-color: #000000;
+            --neon-main: #00ff41;
+            --neon-accent: #ccffcc;
+            --glass-bg: rgba(0, 20, 0, 0.8);
+            --grid-opacity: 0.3;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Orbitron', 'Segoe UI', sans-serif;
+            transition: background-color 0.5s, color 0.5s, border-color 0.5s, box-shadow 0.5s;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: #fff;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            overflow-x: hidden;
+            perspective: 1000px;
+        }
+
+        body::before {
+            content: "";
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background-image:
+                linear-gradient(var(--neon-main) 1px, transparent 1px),
+                linear-gradient(90deg, var(--neon-main) 1px, transparent 1px);
+            background-size: 50px 50px;
+            background-position: center center;
+            transform: rotateX(60deg) scale(2);
+            animation: moveGrid 5s linear infinite;
+            z-index: -1;
+            opacity: var(--grid-opacity);
+            mask-image: radial-gradient(circle, rgba(0,0,0,1) 30%, rgba(0,0,0,0) 80%);
+        }
+
+        @keyframes moveGrid {
+            0% { background-position: 0 0; }
+            100% { background-position: 0 50px; }
+        }
+
+        .header {
+            width: 100%;
+            padding: 15px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            position: fixed;
+            top: 0;
+            z-index: 10;
+        }
+
+        .header__logo {
+            font-size: 1.2rem;
+            font-weight: bold;
+            color: var(--neon-main);
+            text-shadow: 0 0 10px var(--neon-main);
+            text-decoration: none;
+        }
+
+        .header__controls {
+            display: flex;
+            gap: 20px;
+            align-items: center;
+        }
+
+        .header__uptime {
+            font-family: 'Courier New', monospace;
+            font-size: 0.8rem;
+            color: var(--neon-accent);
+            font-weight: bold;
+        }
+
+        .header__theme-btn {
+            background: transparent;
+            border: 1px solid var(--neon-main);
+            color: var(--neon-main);
+            padding: 5px 15px;
+            font-size: 0.7rem;
+            cursor: pointer;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        .header__theme-btn:hover {
+            background: var(--neon-main);
+            color: var(--bg-color);
+            box-shadow: 0 0 15px var(--neon-main);
+        }
+
+        .main-content {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding-top: 80px;
+            width: 100%;
+            padding-bottom: 40px;
+        }
+
+        .cyber-card {
+            background: var(--glass-bg);
+            backdrop-filter: blur(15px);
+            width: 90%;
+            max-width: 450px;
+            padding: 40px 30px;
+            border: 2px solid var(--neon-main);
+            clip-path: polygon(0% 10%, 10% 0%, 100% 0%, 100% 90%, 90% 100%, 0% 100%);
+            position: relative;
+            text-align: center;
+            box-shadow: 0 0 30px rgba(0,0,0, 0.5);
+        }
+
+        .cyber-card::after {
+            content: "ID: 77-IP";
+            position: absolute;
+            top: 0; right: 30px;
+            background: var(--neon-main);
+            color: var(--bg-color);
+            font-size: 10px;
+            padding: 2px 10px;
+            font-weight: bold;
+        }
+
+        h1 {
+            font-size: 24px;
+            text-transform: uppercase;
+            letter-spacing: 4px;
+            margin-bottom: 10px;
+            color: #fff;
+            text-shadow: 0 0 10px var(--neon-main);
+            line-height: 1.4;
+        }
+
+        .status {
+            display: block;
+            font-size: 14px;
+            color: var(--neon-accent);
+            text-transform: uppercase;
+            margin-bottom: 25px;
+            animation: flicker 2s infinite;
+        }
+
+        .tech-stack {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-bottom: 30px;
+        }
+
+        .tech-stack__item {
+            font-size: 0.75rem;
+            color: rgba(255, 255, 255, 0.8);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            padding: 5px 10px;
+            border-radius: 4px;
+            cursor: default;
+            transition: 0.3s;
+        }
+
+        .tech-stack__item:hover {
+            border-color: var(--neon-accent);
+            color: var(--neon-accent);
+            box-shadow: 0 0 10px var(--neon-accent);
+            transform: translateY(-2px);
+        }
+
+        .btn {
+            background: transparent;
+            color: var(--neon-main);
+            border: 1px solid var(--neon-main);
+            padding: 15px 25px;
+            text-decoration: none;
+            text-transform: uppercase;
+            font-size: 12px;
+            font-weight: bold;
+            letter-spacing: 2px;
+            transition: 0.3s;
+            display: inline-block;
+            width: 100%;
+        }
+
+        .btn:hover {
+            background: var(--neon-main);
+            color: var(--bg-color);
+            box-shadow: 0 0 30px var(--neon-main);
+        }
+
+        @keyframes flicker {
+            0%, 18%, 22%, 25%, 53%, 57%, 100% { opacity: 1; text-shadow: 0 0 10px var(--neon-accent); }
+            20%, 24%, 55% { opacity: 0.5; text-shadow: none; }
+        }
+
+        @media screen and (max-width: 480px) {
+            .header { padding: 10px 20px; flex-direction: column; gap: 10px; }
+            .header__uptime { display: none; }
+            .cyber-card { padding: 30px 20px; }
+            h1 { font-size: 20px; }
+        }

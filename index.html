@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="reset3.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="2026-02-16 04.04.38.jpg" type="image/x-icon">
+    <title>IP Cyber-Vcard</title>
+</head>
+<body>
+    <header class="header">
+        <a href="#" class="header__logo">SYSTEM_IP</a>
+        <div class="header__controls">
+            <div class="header__uptime" id="uptimeDisplay">00:00:00</div>
+            <button class="header__theme-btn" id="themeBtn">SWITCH_MODE</button>
+        </div>
+    </header>
+    <main class="main-content">
+        <div class="cyber-card">
+            <h1>Ип Никита Алексеевич</h1>
+            <span class="status">открыт к предложениям</span>
+            <div class="tech-stack">
+                <div class="tech-stack__item">HTML</div>
+                <div class="tech-stack__item">CSS</div>
+                <div class="tech-stack__item">JavaScript</div>
+                <div class="tech-stack__item">Python</div>
+                <div class="tech-stack__item">AI/Neural</div>
+            </div>
+            <a target="blank" href="https://t.me/+QpzXesYhdSs1Mzcy" class="btn">Инициировать контакт</a>
+        </div>
+    </main>
+
+
+    <script>
+        const uptimeElement = document.getElementById('uptimeDisplay');
+        let totalSeconds = 0;
+
+        setInterval(() => {
+            totalSeconds++;
+            const h = Math.floor(totalSeconds / 3600).toString().padStart(2, '0');
+            const m = Math.floor((totalSeconds % 3600) / 60).toString().padStart(2, '0');
+            const s = (totalSeconds % 60).toString().padStart(2, '0');
+            if(uptimeElement) uptimeElement.innerText = `SYS_UP: ${h}:${m}:${s}`;
+        }, 1000);
+
+        const themeBtn = document.getElementById('themeBtn');
+        const body = document.body;
+
+        themeBtn.addEventListener('click', () => {
+            body.classList.toggle('theme-matrix');
+
+            if (body.classList.contains('theme-matrix')) {
+                themeBtn.innerText = "MODE: MATRIX";
+            } else {
+                themeBtn.innerText = "MODE: DEFAULT";
+            }
+        });
+    </script>
+</body>
+</html>
