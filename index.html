@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="reset3.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="2026-02-16 04.04.38.jpg" type="image/x-icon">
+    <title>IP Cyber-Vcard</title>
+</head>
+<body>
+    <div id="boot-screen">
+        <div id="boot-text"></div>
+    </div>
+
+    <div class="desktop-icons">
+        <div class="desktop-icon" data-target="win-profile">
+            <div class="icon-img">💻</div>
+            <div class="icon-text">Мой комп.</div>
+        </div>
+        <div class="desktop-icon" data-target="win-status">
+            <div class="icon-img">📊</div>
+            <div class="icon-text">Задачи</div>
+        </div>
+        <div class="desktop-icon" data-target="win-dos">
+            <div class="icon-img">⌨️</div>
+            <div class="icon-text">CMD.exe</div>
+        </div>
+        <div class="desktop-icon" data-target="win-widgets">
+            <div class="icon-img">🌐</div>
+            <div class="icon-text">Сеть</div>
+        </div>
+    </div>
+
+    <div class="desktop" id="main-desktop" style="display: none;">
+        
+        <div class="window" id="win-profile">
+            <div class="title-bar">
+                <div class="title-bar-text">Мой компьютер - Профиль</div>
+                <div class="title-bar-controls">
+                    <button class="win-btn-min">_</button>
+                    <button class="win-btn-max">□</button>
+                    <button class="win-btn-close">X</button>
+                </div>
+            </div>
+            <div class="window-body">
+                <div class="content-area">
+                    <h2 class="xp-title">ИП НИКИТА АЛЕКСЕЕВИЧ</h2>
+                    <hr>
+                    <p><b>Локация:</b> Россия</p>
+                    <p><b>Специализация:</b> Web Development</p>
+                    <p><b>Аптайм:</b> <span id="uptime" class="highlight">00:00:00</span></p>
+                    
+                    <div class="button-group">
+                        <a href="https://t.me/+QpzXesYhdSs1Mzcy" target="_blank" class="xp-btn">Telegram</a>
+                        <a href="https://github.com/ChrisRedfield48" target="_blank" class="xp-btn">GitHub</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="window" id="win-status">
+            <div class="title-bar">
+                <div class="title-bar-text">Диспетчер задач</div>
+                <div class="title-bar-controls">
+                    <button class="win-btn-min">_</button>
+                    <button class="win-btn-max">□</button>
+                    <button class="win-btn-close">X</button>
+                </div>
+            </div>
+            <div class="window-body">
+                <fieldset class="xp-group">
+                    <legend>Загрузка ЦП (Навыки)</legend>
+                    <div class="skill-row"><span>HTML/CSS:</span> <div class="bar-bg"><div class="bar-fill green-fill" style="width: 85%;"></div></div> <span>85%</span></div>
+                    <div class="skill-row"><span>JavaScript:</span> <div class="bar-bg"><div class="bar-fill green-fill" style="width: 5%;"></div></div> <span>5%</span></div>
+                    <div class="skill-row"><span>Python/AI:</span> <div class="bar-bg"><div class="bar-fill green-fill" style="width: 0%;"></div></div> <span>0%</span></div>
+                </fieldset>
+
+                <fieldset class="xp-group" style="margin-top: 15px;">
+                    <legend>Активные процессы (Задачи)</legend>
+                    <ul class="tree-view">
+                        <li class="task-done">☑ Базовые протоколы (HTML/CSS)</li>
+                        <li class="task-run">▶ Фарм кредитов (Ozon / ПВЗ)</li>
+                        <li class="task-wait">☐ Транспортный модуль (Автошкола)</li>
+                        <li class="task-wait">☐ Euro Academy (Трансфер)</li>
+                    </ul>
+                </fieldset>
+            </div>
+        </div>
+
+        <div class="window" id="win-dos">
+            <div class="title-bar">
+                <div class="title-bar-text">C:\WINDOWS\system32\cmd.exe</div>
+                <div class="title-bar-controls">
+                    <button class="win-btn-min">_</button>
+                    <button class="win-btn-max">□</button>
+                    <button class="win-btn-close">X</button>
+                </div>
+            </div>
+            <div class="window-body dos-body" id="terminal-window">
+                <div id="terminal-output"></div>
+                <div class="input-line">
+                    <span>C:\Documents and Settings\Nikita></span>
+                    <input type="text" id="terminal-input" autocomplete="off" spellcheck="false">
+                </div>
+            </div>
+        </div>
+
+        <div class="window" id="win-widgets">
+            <div class="title-bar">
+                <div class="title-bar-text">Свойства обозревателя</div>
+                <div class="title-bar-controls">
+                    <button class="win-btn-min">_</button>
+                    <button class="win-btn-max">□</button>
+                    <button class="win-btn-close">X</button>
+                </div>
+            </div>
+            <div class="window-body">
+                <div class="content-area">
+                    <p><b>Запуск Euro Academy:</b></p>
+                    <div class="inset-box" id="countdown">Загрузка...</div>
+
+                    <p style="margin-top: 10px;"><b>Погода (Сербия):</b></p>
+                    <div class="inset-box" id="weather">Синхронизация...</div>
+
+                    <p style="margin-top: 10px;"><b>Сетевое окружение:</b></p>
+                    <div class="folder-view">
+                        <a href="https://chrisredfield48.github.io/Cyberpunk/" target="_blank" class="folder-item">🗂 Cyberpunk_Promo</a>
+                        <a href="https://chrisredfield48.github.io/Createx/" target="_blank" class="folder-item">🗂 Createx_UI</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
