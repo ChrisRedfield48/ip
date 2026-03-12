@@ -79,124 +79,123 @@ const termOutput = document.getElementById('terminal-output');
 const termInput = document.getElementById('terminal-input');
 const termWindow = document.getElementById('terminal-window');
 
-termOutput.innerHTML = `<div>SYSTEM_READY.</div>`;
-termWindow.addEventListener('click', () => termInput.focus());
+if(termOutput && termInput && termWindow) {
+    termOutput.innerHTML = `<div>SYSTEM_READY.</div>`;
+    termWindow.addEventListener('click', () => termInput.focus());
 
-termInput.addEventListener('keydown', (e) => {
-    if (e.key === 'Enter') {
-        const val = termInput.value.trim().toLowerCase(); 
-        termOutput.innerHTML += `<div><span style="color: #3b82f6;">></span> <span style="color: #fff;">${termInput.value}</span></div>`;
-        if (val === 'help') {
-            termOutput.innerHTML += `<div style="color: #a1a1aa; margin-bottom: 5px;">CMD: status, clear, love, wiki, matrix, danya, quote, advice</div>`;
-        } 
-        else if (val === 'status') {
-            termOutput.innerHTML += `<div style="color: #22c55e;">[OK] HTML/CSS (100%). JS Engine: 5%.</div>`;
-        } 
-        else if (val === 'matrix') {
-            document.body.style.filter = "hue-rotate(90deg) invert(0.9)";
-            termOutput.innerHTML += `<div style="color: #22c55e;">WAKE UP, NIKITA...</div>`;
-            setTimeout(() => document.body.style.filter = "none", 5000);
+    termInput.addEventListener('keydown', (e) => {
+        if (e.key === 'Enter') {
+            const val = termInput.value.trim().toLowerCase(); 
+            termOutput.innerHTML += `<div><span style="color: #3b82f6;">></span> <span style="color: #fff;">${termInput.value}</span></div>`;
+            if (val === 'help') {
+                termOutput.innerHTML += `<div style="color: #a1a1aa; margin-bottom: 5px;">CMD: status, clear, love, wiki, matrix, danya, quote, advice</div>`;
+            } 
+            else if (val === 'status') {
+                termOutput.innerHTML += `<div style="color: #22c55e;">[OK] HTML/CSS (100%). JS Engine: 5%.</div>`;
+            } 
+            else if (val === 'matrix') {
+                document.body.style.filter = "hue-rotate(90deg) invert(0.9)";
+                termOutput.innerHTML += `<div style="color: #22c55e;">WAKE UP, NIKITA...</div>`;
+                setTimeout(() => document.body.style.filter = "none", 5000);
+            }
+            else if (val === 'clear') {
+                termOutput.innerHTML = '';
+            } 
+            else if (val === 'love') {
+                termOutput.innerHTML += `<div style="color: #ff3366;">Lov 1</div>`;
+            }
+            else if (val === 'danya') {
+                termOutput.innerHTML += `<div style="color: #ef4444;">lox</div>`;
+            }
+            else if (val.includes('wiki')) {
+                termOutput.innerHTML += `<div style="color: #3b82f6;">Wikipedia: OK.</div>`;
+                setTimeout(() => window.open('https://ru.wikipedia.org', '_blank'), 1000);
+            }
+            else if (val === 'quote') {
+                termOutput.innerHTML += `<div style="color: #a1a1aa; font-style: italic;">"Когда будущее перестало быть обещанием и стало угрозой?" — Невидимки</div>`;
+            }
+            else if (val === 'advice') {
+                termOutput.innerHTML += `<div style="color: #3b82f6;">SYNCING WITH EXTERNAL API...</div>`;
+                fetch('https://api.adviceslip.com/advice')
+                    .then(res => res.json())
+                    .then(data => {
+                        termOutput.innerHTML += `<div style="color: #22c55e;">[INCOMING]: ${data.slip.advice}</div>`;
+                        termWindow.scrollTop = termWindow.scrollHeight;
+                    })
+                    .catch(() => {
+                        termOutput.innerHTML += `<div style="color: #ef4444;">API OFFLINE</div>`;
+                    });
+            }
+            else if (val !== '') {
+                termOutput.innerHTML += `<div style="color: #ef4444;">Error.</div>`;
+            }
+            termInput.value = '';
+            termWindow.scrollTop = termWindow.scrollHeight;
         }
-        else if (val === 'clear') {
-            termOutput.innerHTML = '';
-        } 
-        else if (val === 'love') {
-            termOutput.innerHTML += `<div style="color: #ff3366;">Lov 1</div>`;
-        }
-        else if (val === 'danya') {
-            termOutput.innerHTML += `<div style="color: #ef4444;">lox</div>`;
-        }
-        else if (val.includes('wiki')) {
-            termOutput.innerHTML += `<div style="color: #3b82f6;">Wikipedia: OK.</div>`;
-            setTimeout(() => window.open('https://ru.wikipedia.org', '_blank'), 1000);
-        }
-        else if (val === 'quote') {
-            termOutput.innerHTML += `<div style="color: #a1a1aa; font-style: italic;">"Когда будущее перестало быть обещанием и стало угрозой?" — Невидимки</div>`;
-        }
-        else if (val === 'advice') {
-            termOutput.innerHTML += `<div style="color: #3b82f6;">SYNCING WITH EXTERNAL API...</div>`;
-            fetch('https://api.adviceslip.com/advice')
-                .then(res => res.json())
-                .then(data => {
-                    termOutput.innerHTML += `<div style="color: #22c55e;">[INCOMING]: ${data.slip.advice}</div>`;
-                    termWindow.scrollTop = termWindow.scrollHeight;
-                })
-                .catch(() => {
-                    termOutput.innerHTML += `<div style="color: #ef4444;">API OFFLINE</div>`;
-                });
-        }
-        else if (val !== '') {
-            termOutput.innerHTML += `<div style="color: #ef4444;">Error.</div>`;
-        }
-        termInput.value = '';
-        termWindow.scrollTop = termWindow.scrollHeight;
-    }
-});
-
-const taskList = document.getElementById("task-list");
-const extraTasks = [
-  "○ Доработать портфолио",
-  "○ Настроить CI/CD"
-];
-
-extraTasks.forEach(task => {
-  const li = document.createElement("li");
-  li.className = "wait";
-  li.textContent = task;
-  taskList.appendChild(li);
-});
-
-const githubUsername = "ChrisRedfield48"; // <-- ТВОЙ GITHUB НИКНЕЙМ
-const graph = document.getElementById("commit-graph");
-
-function renderSkeleton() {
-  graph.innerHTML = "";
-  for (let i = 0; i < 364; i++) {
-    const cell = document.createElement("div");
-    cell.className = "commit-cell skeleton-cell";
-    graph.appendChild(cell);
-  }
-}
-
-async function renderGitHubActivity(username) {
-  renderSkeleton();
-  try {
-    const response = await fetch(`https://github-contributions-api.jasonwood.me/v1/${username}`);
-    const data = await response.json();
-    graph.innerHTML = "";
-    
-    const contributions = data.contributions || [];
-    const lastYear = contributions.slice(-364);
-
-    lastYear.forEach(day => {
-      const cell = document.createElement("div");
-      cell.className = "commit-cell";
-      const count = day.count;
-      
-      if (count > 0 && count <= 2) cell.classList.add("lvl-1");
-      else if (count > 2 && count <= 5) cell.classList.add("lvl-2");
-      else if (count > 5 && count <= 8) cell.classList.add("lvl-3");
-      else if (count > 8) cell.classList.add("lvl-4");
-      
-      graph.appendChild(cell);
     });
-  } catch (err) {
-    graph.innerHTML = `<span style="color: var(--text-secondary); font-size: 12px; grid-column: 1 / -1;">GitHub API Error</span>`;
-  }
 }
-
-renderGitHubActivity(githubUsername);
 
 let keySequence = "";
 document.addEventListener("keydown", (e) => {
-  keySequence += e.key.toLowerCase();
-  
-  if (keySequence.includes("virus")) {
-    window.open("https://ru.wikipedia.org/wiki/Umbrella", "_blank");
-    keySequence = "";
-  }
-  
-  if (keySequence.length > 15) {
-    keySequence = keySequence.slice(-15);
-  }
+    keySequence += e.key.toLowerCase();
+    
+    if (keySequence.includes("virus")) {
+        window.open("https://ru.wikipedia.org/wiki/Umbrella", "_blank");
+        keySequence = "";
+    }
+    
+    if (keySequence.length > 15) {
+        keySequence = keySequence.slice(-15);
+    }
 });
+
+const epochEl = document.getElementById('ai-epoch');
+const lossEl = document.getElementById('ai-loss');
+const accEl = document.getElementById('ai-acc');
+const logEl = document.getElementById('ai-log');
+const progressEl = document.getElementById('ai-progress');
+
+let currentEpoch = 1;
+let currentLoss = 0.999;
+let currentAcc = 10.0;
+
+const aiLogs = [
+    "Adjusting weights...",
+    "Backpropagation active",
+    "Optimizing gradient descent",
+    "Validating batch size 64",
+    "Dropout rate applied: 0.2",
+    "Computing loss function",
+    "Updating tensor matrix",
+    "Extracting features..."
+];
+
+if (epochEl && lossEl && accEl && logEl && progressEl) {
+    setInterval(() => {
+        if (currentEpoch < 500) {
+            currentEpoch += Math.floor(Math.random() * 4) + 1;
+            if (currentEpoch > 500) currentEpoch = 500;
+            
+            currentLoss = (currentLoss * 0.985).toFixed(4);
+            currentAcc = Math.min(99.9, currentAcc + Math.random() * 1.2).toFixed(1);
+            
+            epochEl.innerText = currentEpoch;
+            lossEl.innerText = currentLoss;
+            accEl.innerText = currentAcc + "%";
+            progressEl.style.width = (currentEpoch / 500 * 100) + "%";
+
+            const newLog = document.createElement('div');
+            newLog.innerText = `> [${currentEpoch}/500] ${aiLogs[Math.floor(Math.random() * aiLogs.length)]}`;
+            logEl.appendChild(newLog);
+            
+            if (logEl.children.length > 3) {
+                logEl.removeChild(logEl.firstChild);
+            }
+        } else {
+            currentEpoch = 1;
+            currentLoss = 0.999;
+            currentAcc = 10.0;
+            logEl.innerHTML = '<div>> RESTARTING TRAINING CYCLE...</div>';
+        }
+    }, 800);
+}

@@ -70,11 +70,12 @@
 
             <div class="bento-card quests-card">
                 <h3>ПЛАНОВЫЕ ЗАДАЧИ</h3>
-                <ul class="quest-list" id="task-list">
+                <ul class="quest-list">
                     <li class="active">⚡ Закончить колледж</li>
                     <li class="active">⚡ Фарм ресурсов</li>
                     <li class="wait">○ Изучение Python и ИИ</li>
                     <li class="wait">○ Поступление в Европу</li>
+                    <li class="wait">○ Доработать портфолио</li>
                 </ul>
             </div>
 
@@ -88,6 +89,7 @@
                     </div>
                 </div>
             </div>
+            
             <div class="bento-card farm-card">
                 <h3>ФАРМ РЕСУРСОВ</h3>
                 <div class="farm-info">
@@ -98,6 +100,7 @@
                     + Сварить кофе
                 </button>
             </div>
+            
             <div class="bento-card skills-card">
                 <h3>ТЕКУЩИЙ СТЕК</h3>
                 <div class="skill">
@@ -123,9 +126,20 @@
                 </ul>
             </div>
 
-            <div class="bento-card commit-card">
-                <h3>ГРАФИК КОММИТОВ</h3>
-                <div id="commit-graph" class="graph"></div>
+            <div class="bento-card ai-card">
+                <h3>ОБУЧЕНИЕ НЕЙРОСЕТИ (МОДУЛЬ ИИ)</h3>
+                <div class="ai-status">
+                    <div class="ai-stat"><span>EPOCH</span> <span id="ai-epoch" class="accent">1</span>/500</div>
+                    <div class="ai-stat"><span>LOSS</span> <span id="ai-loss">0.999</span></div>
+                    <div class="ai-stat"><span>ACCURACY</span> <span id="ai-acc">10.0%</span></div>
+                </div>
+                <div class="ai-log" id="ai-log">
+                    <div>> INIT TENSORFLOW... OK</div>
+                    <div>> LOADING DATASET... OK</div>
+                </div>
+                <div class="bar-bg" style="margin-top: 15px;">
+                    <div class="bar-fill" id="ai-progress" style="width: 0%; background: var(--green);"></div>
+                </div>
             </div>
 
         </main>
