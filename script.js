@@ -136,7 +136,6 @@ termInput.addEventListener('keydown', (e) => {
 const taskList = document.getElementById("task-list");
 const extraTasks = [
   "○ Доработать портфолио",
-  "○ Сдать на права в автошколе",
   "○ Настроить CI/CD"
 ];
 
