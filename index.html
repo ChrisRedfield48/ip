@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nikita | Bento Portfolio</title>
+    <link rel="shortcut icon" href="2026-02-16 04.04.38.jpg" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="reset3.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="no-scroll">
+    <div id="preloader">
+        <div class="loader-content">
+            <div class="loader-logo">SYSTEM.<span>IP</span></div>
+            <div class="loader-bar"><div class="loader-fill"></div></div>
+            <div class="loader-text" id="loader-text">SYS_INIT...</div>
+        </div>
+    </div>
+
+    <div class="container">
+        <header class="header">
+            <div class="logo">SYSTEM.<span>IP</span></div>
+            <div class="header-status"><span class="pulse"></span> Online</div>
+        </header>
+
+        <main class="bento-grid">
+            <div class="bento-card profile-card">
+                <div class="profile-content">
+                    <img src="2026-02-16 04.04.38.jpg" alt="Никита Ип Аватар" class="profile-avatar">
+                    <div class="badge">Web Developer</div>
+                    <h1>Ип Никита</h1>
+                    <p class="subtitle">Создаю современные интерфейсы. Планирую трансфер в Европу. В свободное время — качалка и изучение психологии.</p>
+                    <div class="links">
+                        <a href="https://t.me/+QpzXesYhdSs1Mzcy" target="_blank" class="btn primary">Telegram</a>
+                        <a href="https://github.com/ChrisRedfield48" target="_blank" class="btn secondary">GitHub</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bento-card time-card">
+                <h3>UPTIME СИСТЕМЫ</h3>
+                <div class="time-display" id="uptime">00:00:00</div>
+                <div class="divider"></div>
+                <h3>ТРАНСФЕР (АКАДЕМИЯ)</h3>
+                <div class="time-display accent" id="countdown">0000d 00h 00m</div>
+            </div>
+
+            <div class="bento-card gym-card">
+                <h3>ФИЗПОДГОТОВКА</h3>
+                <div class="gym-info">
+                    <div class="gym-title">Режим: Качалка</div>
+                    <div class="gym-subtitle">Сила и выносливость</div>
+                </div>
+                <div class="skill-header" style="margin-top: 15px;"><span>Дисциплина</span> <span>90%</span></div>
+                <div class="bar-bg"><div class="bar-fill" style="width: 90%;"></div></div>
+            </div>
+
+            <div class="bento-card radar-card">
+                <h3>РАДАР (СЕРБИЯ)</h3>
+                <div class="weather" id="weather">SYNCING...</div>
+                <div class="divider"></div>
+                <h3>ПРОЕКТЫ</h3>
+                <div class="project-links">
+                    <a href="https://chrisredfield48.github.io/graphic-designer/" target="_blank">↗ Graphic Designer</a>
+                    <a href="https://chrisredfield48.github.io/Cyberpunk/" target="_blank">↗ Cyberpunk Promo</a>
+                    <a href="https://chrisredfield48.github.io/Createx/" target="_blank">↗ Createx UI</a>
+                </div>
+            </div>
+
+            <div class="bento-card quests-card">
+                <h3>ПЛАНОВЫЕ ЗАДАЧИ</h3>
+                <ul class="quest-list" id="task-list">
+                    <li class="active">⚡ Закончить колледж</li>
+                    <li class="active">⚡ Фарм ресурсов</li>
+                    <li class="wait">○ Изучение Python и ИИ</li>
+                    <li class="wait">○ Поступление в Европу</li>
+                </ul>
+            </div>
+
+            <div class="bento-card terminal-card">
+                <div class="term-header">Terminal v5.0</div>
+                <div class="term-body" id="terminal-window">
+                    <div id="terminal-output"></div>
+                    <div class="term-input-wrapper">
+                        <span>></span>
+                        <input type="text" id="terminal-input" autocomplete="off" spellcheck="false" placeholder="Введите 'help'...">
+                    </div>
+                </div>
+            </div>
+            <div class="bento-card farm-card">
+                <h3>ФАРМ РЕСУРСОВ</h3>
+                <div class="farm-info">
+                    <div class="farm-title">Статус: Бариста</div>
+                    <div class="farm-subtitle">Сварено чашек: <span id="coffee-count" style="color: var(--accent); font-weight: bold;">0</span></div>
+                </div>
+                <button id="brew-btn" class="btn secondary" style="margin-top: 15px; width: 100%; text-align: center; cursor: pointer;">
+                    + Сварить кофе
+                </button>
+            </div>
+            <div class="bento-card skills-card">
+                <h3>ТЕКУЩИЙ СТЕК</h3>
+                <div class="skill">
+                    <div class="skill-header"><span>HTML / CSS / Figma</span> <span>100%</span></div>
+                    <div class="bar-bg"><div class="bar-fill" style="width: 100%;"></div></div>
+                </div>
+                <div class="skill">
+                    <div class="skill-header"><span>JavaScript</span> <span>10%</span></div>
+                    <div class="bar-bg"><div class="bar-fill" style="width: 5%;"></div></div>
+                </div>
+                <div class="skill">
+                    <div class="skill-header"><span>Python / AI</span> <span>0%</span></div>
+                    <div class="bar-bg"><div class="bar-fill" style="width: 0%;"></div></div>
+                </div>
+            </div>
+
+            <div class="bento-card hardware-card">
+                <h3>ЖЕЛЕЗО И ИНСТРУМЕНТЫ</h3>
+                <ul class="tech-list">
+                    <li>MacBook Pro</li>
+                    <li>Custom PC</li>
+                    <li>iPhone</li>
+                </ul>
+            </div>
+
+            <div class="bento-card commit-card">
+                <h3>ГРАФИК КОММИТОВ</h3>
+                <div id="commit-graph" class="graph"></div>
+            </div>
+
+        </main>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
