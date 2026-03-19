@@ -91,7 +91,7 @@ if(termOutput && termInput && termWindow) {
                 termOutput.innerHTML += `<div style="color: #a1a1aa; margin-bottom: 5px;">CMD: status, clear, love, wiki, matrix, danya, quote, advice</div>`;
             } 
             else if (val === 'status') {
-                termOutput.innerHTML += `<div style="color: #22c55e;">[OK] HTML/CSS (100%). JS Engine: 5%.</div>`;
+                termOutput.innerHTML += `<div style="color: #22c55e;">[OK] HTML/CSS (100%). JS Engine: 10%.</div>`;
             } 
             else if (val === 'matrix') {
                 document.body.style.filter = "hue-rotate(90deg) invert(0.9)";
