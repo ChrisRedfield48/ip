@@ -4,286 +4,114 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>NIP.SYS — Никита Ип</title>
-<link rel="shortcut icon" href="2026-02-16 04.04.38.jpg" type="image/x-icon">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=DM+Mono:ital,wght@0,300;0,400;0,500;1,400&family=Bebas+Neue&family=Inter+Tight:wght@300;400;500;600;700;900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@300;400;500&family=Inter+Tight:wght@400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="reset3.css">
 <link rel="stylesheet" href="style.css">
+<link rel="shortcut icon" href="image/изображение-Photoroom.png" type="image/x-icon">
 </head>
-<body class="no-scroll">
+<body>
 
-<div id="cursor-dot"></div>
-<div id="cursor-ring"></div>
-
-<!-- PRELOADER -->
-<div id="preloader">
-  <div class="pre-inner">
-    <div class="pre-logo">NIP<span>.</span>SYS</div>
-    <div class="pre-ver">v3.0 · REBOOT SEQUENCE INITIATED</div>
-    <div class="pre-line" id="s1"><span class="pre-dot"></span><span class="pre-text">KERNEL BOOT</span><span class="pre-check"></span></div>
-    <div class="pre-line" id="s2"><span class="pre-dot"></span><span class="pre-text">UI MODULES</span><span class="pre-check"></span></div>
-    <div class="pre-line" id="s3"><span class="pre-dot"></span><span class="pre-text">NETWORK SYNC</span><span class="pre-check"></span></div>
-    <div class="pre-line" id="s4"><span class="pre-dot"></span><span class="pre-text">ACCESS GRANTED</span><span class="pre-check"></span></div>
-    <div class="pre-bar"><div class="pre-fill"></div></div>
-    <div class="pre-pct" id="pre-pct">0%</div>
-  </div>
-  <div class="pre-grid-bg"></div>
-</div>
-
-<!-- MAIN APP -->
-<div id="app">
-  <!-- HEADER -->
-  <header class="hd">
-    <div class="hd-logo">NIP<span>.</span>SYS</div>
-    <nav class="hd-nav">
-      <a href="#" class="active">DASHBOARD</a>
-      <a href="https://github.com/ChrisRedfield48" target="_blank">PROJECTS</a>
-      <a href="#guestbook-section">GUESTBOOK</a>
-      <a href="https://t.me/+QpzXesYhdSs1Mzcy" target="_blank">TELEGRAM</a>
-    </nav>
-    <div class="hd-status"><span class="hd-dot"></span>ONLINE · BELGRADE, RS</div>
+<div class="container">
+  <header class="header">
+    <div class="logo">
+      <span class="logo-eagle">🦅</span>
+      NIP<span class="logo-dot">.</span>SYS
+    </div>
+    <div class="header-controls">
+      <div class="status">
+        <div class="status-dot"></div>
+        <span id="clock">00:00:00</span>
+      </div>
+      <button class="theme-toggle" id="theme-btn" aria-label="Переключить тему">☀️</button>
+    </div>
   </header>
 
-  <!-- BENTO GRID -->
   <main class="grid">
+    <article class="card profile-card">
+      <label for="coat-of-arms-upload" class="coat-label">
+        <div class="coat-of-arms" id="coat-of-arms-display"><img src="image/изображение-Photoroom.png" alt="🦅"></div>
+      </label>
+      <input type="file" id="coat-of-arms-upload" accept="image/*" style="display: none;">
 
-    <!-- PROFILE -->
-    <div class="card c-profile">
-      <div class="profile-gfx">
-        <img src="2026-02-16 04.04.38.jpg" alt="Никита Ип" class="avatar-img"
-        onerror="this.style.display='none';document.querySelector('.avatar-fallback').style.display='flex'">
-        <div class="avatar-fallback">NI</div>
-        <div class="profile-scanline"></div>
-      </div>
-      <div class="profile-body">
+      <div class="profile-info">
         <div class="badges">
-          <span class="badge badge-y">WEB DEVELOPER</span>
-          <span class="badge badge-pulse">OPEN TO WORK</span>
-          <span class="badge">🇷🇸 SERBIA</span>
+          <span class="badge active">WEB DEVELOPER</span>
+          <span class="badge">OPEN TO WORK</span>
+          <span class="badge">🇷🇸 СЕРБИЯ</span>
         </div>
-        <div class="profile-name">ИП<span>НИКИТА</span></div>
-        <p class="profile-sub">Создаю современные интерфейсы.<br>Планирую трансфер в Европу.</p>
-        <div class="btns">
-          <a href="https://t.me/+QpzXesYhdSs1Mzcy" target="_blank" class="btn btn-y">
-            <svg width="11" height="11" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.894 8.221-1.97 9.28c-.145.658-.537.818-1.084.508l-3-2.21-1.447 1.394c-.16.16-.295.295-.605.295l.213-3.053 5.56-5.023c.242-.213-.054-.333-.373-.12l-6.871 4.326-2.962-.924c-.643-.204-.657-.643.136-.953l11.57-4.461c.537-.194 1.006.131.833.941z"/></svg>
-            TELEGRAM
-          </a>
-          <a href="https://github.com/ChrisRedfield48" target="_blank" class="btn">
-            <svg width="11" height="11" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0112 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"/></svg>
-            GITHUB
-          </a>
+        <h1>НИКИТА ИП</h1>
+        <p>Создаю современные интерфейсы. Развиваю личные проекты, пишу код, планирую трансфер в Европу.</p>
+        <div class="links">
+          <a href="https://t.me/+QpzXesYhdSs1Mzcy" target="_blank" class="btn">Telegram ↗</a>
+          <a href="https://github.com/ChrisRedfield48" target="_blank" class="btn">GitHub ↗</a>
         </div>
       </div>
-      <div class="glitch-layer glitch-r"></div>
-      <div class="glitch-layer glitch-b"></div>
-    </div>
+    </article>
 
-    <!-- TIME -->
-    <div class="card c-time">
-      <div class="label">Аптайм сессии</div>
-      <div class="time-block">
-        <div class="time-val" id="uptime">00:00:00</div>
+    <section class="card">
+      <div class="card-title">Стек и обучение</div>
+      <div class="list-item">
+        <span>HTML / CSS / Figma</span>
+        <span class="meta">Core</span>
       </div>
-      <div class="time-sep"></div>
-      <div class="label">Трансфер (Академия)</div>
-      <div class="time-val-sm" id="countdown">0000d 00h 00m</div>
-      <div class="prog-bar"><div class="prog-fill" id="cd-prog"></div></div>
-    </div>
-
-    <!-- WEATHER -->
-    <div class="card c-weather">
-      <div class="label">Радар — Белград</div>
-      <div class="w-main">
-        <div class="w-icon" id="w-icon">⏳</div>
-        <div class="w-temp" id="w-temp">—</div>
+      <div class="list-item">
+        <span>JavaScript</span>
+        <span class="meta">15%</span>
       </div>
-      <div class="w-detail" id="w-detail">SYNCING...</div>
-      <div class="w-city">📍 Белград, Serbia</div>
-      <div id="w-updated" style="font-family:var(--mono);font-size:9px;color:var(--text-3);letter-spacing:1px;margin-top:6px;">SYNCING...</div>
-    </div>
-
-    <!-- SKILLS -->
-    <div class="card c-skills">
-      <div class="label">Текущий стек</div>
-      <div class="skill">
-        <div class="skill-row"><span>HTML / CSS / Figma</span><span class="skill-pct">100%</span></div>
-        <div class="sbar"><div class="sbar-fill y" data-w="100"></div></div>
-      </div>
-      <div class="skill">
-        <div class="skill-row"><span>JavaScript</span><span class="skill-pct">10%</span></div>
-        <div class="sbar"><div class="sbar-fill" data-w="10"></div></div>
-      </div>
-      <div class="skill">
-        <div class="skill-row"><span>Python / AI</span><span class="skill-pct">0%</span></div>
-        <div class="sbar"><div class="sbar-fill" data-w="0"></div></div>
-      </div>
-      <div class="skill">
-        <div class="skill-row"><span>Дисциплина</span><span class="skill-pct">90%</span></div>
-        <div class="sbar"><div class="sbar-fill g" data-w="90"></div></div>
-      </div>
-    </div>
-
-    <!-- QUESTS -->
-    <div class="card c-quests">
-      <div class="label">Плановые задачи</div>
-      <div class="quest on"><span class="quest-ico">⚡</span><span class="quest-txt">Закончить колледж</span><span class="quest-tag">ACTIVE</span></div>
-      <div class="quest on"><span class="quest-ico">⚡</span><span class="quest-txt">Фарм ресурсов</span><span class="quest-tag">ACTIVE</span></div>
-      <div class="quest off"><span class="quest-ico">○</span><span class="quest-txt">Изучение Python и ИИ</span><span class="quest-tag">QUEUED</span></div>
-      <div class="quest off"><span class="quest-ico">○</span><span class="quest-txt">Поступление в Европу</span><span class="quest-tag">QUEUED</span></div>
-    </div>
-
-    <!-- TERMINAL -->
-    <div class="card c-terminal">
-      <div class="term-hd">
-        <div class="term-circles">
-          <span class="tc tc-r"></span><span class="tc tc-y"></span><span class="tc tc-g"></span>
+      
+      <div class="status-module">
+        <div class="list-item" style="border:none; padding:0;">
+          <span style="font-size: 0.8rem; color: var(--text-muted);">Статус: Обучение Python & AI</span>
+          <span class="meta" style="color: var(--accent);">В процессе</span>
         </div>
-        <span class="term-title">TERMINAL v5.0</span>
-        <span class="term-tip">type 'help'</span>
-      </div>
-      <div class="term-body" id="term-win">
-        <div id="term-out" class="term-out"></div>
-        <div class="term-row">
-          <span class="term-prompt-str">nikita@nip:~$</span>
-          <input class="term-inp" id="term-inp" type="text" autocomplete="off" spellcheck="false" placeholder="▋">
+        <div class="progress-bar">
+          <div class="progress-fill"></div>
         </div>
       </div>
-    </div>
+    </section>
 
-    <!-- MOOD -->
-    <div class="card c-mood">
-      <div class="label">Режим</div>
-      <div class="mood-grid">
-        <button class="mood-btn on" data-mood="focus">⚡ Фокус</button>
-        <button class="mood-btn" data-mood="grind">🔥 Гринд</button>
-        <button class="mood-btn" data-mood="rest">🌙 Отдых</button>
-        <button class="mood-btn" data-mood="gym">💪 Зал</button>
+    <section class="card">
+      <div class="card-title">Проекты</div>
+      <a href="https://chrisredfield48.github.io/graphic-designer/" target="_blank" class="proj-link">
+        <span>Graphic Designer</span>
+        <span class="meta">UI</span>
+      </a>
+      <a href="https://chrisredfield48.github.io/Cyberpunk/" target="_blank" class="proj-link">
+        <span>Cyberpunk Promo</span>
+        <span class="meta">PROMO</span>
+      </a>
+      <a href="https://chrisredfield48.github.io/Createx/" target="_blank" class="proj-link">
+        <span>Createx UI</span>
+        <span class="meta">UI KIT</span>
+      </a>
+    </section>
+
+    <section class="card">
+      <div class="card-title">Инфраструктура</div>
+      <div class="list-item">
+        <span>MacBook Pro</span>
+        <span class="meta">M-SERIES</span>
       </div>
-      <div class="mood-desc" id="mood-desc">Максимальная продуктивность. Цель — код и прогресс.</div>
-    </div>
-
-    <!-- NOW PLAYING (новая карточка) -->
-    <div class="card c-now">
-      <div class="label">Сейчас слушаю</div>
-      <div class="now-inner">
-        <div class="now-disc" id="now-disc">
-          <div class="now-disc-inner"></div>
-        </div>
-        <div class="now-info">
-          <div class="now-track" id="now-track">LOADING...</div>
-          <div class="now-artist" id="now-artist">—</div>
-          <div class="now-bar-wrap">
-            <div class="now-bar"><div class="now-bar-fill" id="now-bar-fill"></div></div>
-            <div class="now-time" id="now-time">0:00 / 0:00</div>
-          </div>
-          <div class="now-equalizer" id="now-eq">
-            <span></span><span></span><span></span><span></span><span></span>
-          </div>
-        </div>
+      <div class="list-item">
+        <span>Custom PC</span>
+        <span class="meta">RTX BUILD</span>
       </div>
-    </div>
-
-    <!-- HARDWARE -->
-    <div class="card c-hw">
-      <div class="label">Железо</div>
-      <div class="hw-item"><span class="hw-ico">💻</span>MacBook Pro<span class="hw-spec">M-SERIES</span></div>
-      <div class="hw-item"><span class="hw-ico">🖥️</span>Custom PC<span class="hw-spec">CUSTOM</span></div>
-      <div class="hw-item"><span class="hw-ico">📱</span>iPhone<span class="hw-spec">iOS</span></div>
-    </div>
-
-    <!-- PROJECTS -->
-    <div class="card c-projects">
-      <div class="label">Проекты</div>
-      <div class="proj-grid">
-        <a href="https://chrisredfield48.github.io/graphic-designer/" target="_blank" class="proj-item">
-          <span class="proj-arrow">↗</span>
-          <div class="proj-name">Graphic Designer</div>
-          <div class="proj-tag">UI DESIGN</div>
-        </a>
-        <a href="https://chrisredfield48.github.io/Cyberpunk/" target="_blank" class="proj-item">
-          <span class="proj-arrow">↗</span>
-          <div class="proj-name">Cyberpunk Promo</div>
-          <div class="proj-tag">PROMO SITE</div>
-        </a>
-        <a href="https://chrisredfield48.github.io/Createx/" target="_blank" class="proj-item">
-          <span class="proj-arrow">↗</span>
-          <div class="proj-name">Createx UI</div>
-          <div class="proj-tag">UI KIT</div>
-        </a>
+      <div class="list-item">
+        <span>Рабочая среда</span>
+        <span class="meta">VS CODE + AI</span>
       </div>
-    </div>
-
-    <!-- STATS -->
-    <div class="card c-wide">
-      <div class="label">Прогресс трансфера</div>
-      <div class="stats-row">
-        <div class="stat-block">
-          <div class="stat-n" id="stat-days">—</div>
-          <div class="stat-d">ДНЕЙ ДО АКАДЕМИИ</div>
-        </div>
-        <div class="stat-block">
-          <div class="stat-n" id="stat-pct">—</div>
-          <div class="stat-d">ПУТЬ ПРОЙДЕН</div>
-        </div>
-        <div class="stat-block">
-          <div class="stat-n" id="stat-year">2029</div>
-          <div class="stat-d">ГОД ЦЕЛИ</div>
-        </div>
+      <div class="list-item">
+        <span>Homelab Server</span>
+        <span class="meta">UBUNTU / DOCKER</span>
       </div>
-    </div>
-
-    <!-- LOCATION MAP (новая карточка) -->
-    <div class="card c-map">
-      <div class="label">Локация</div>
-      <div class="map-grid">
-        <div class="map-dot-field" id="map-field">
-          <div class="map-crosshair">
-            <div class="map-pulse"></div>
-            <div class="map-pulse map-pulse-2"></div>
-            <div class="map-center-dot"></div>
-          </div>
-          <div class="map-coords">44.8048° N, 20.4651° E</div>
-          <div class="map-city-label">RUSSIA</div>
-        </div>
+      <div class="list-item" style="margin-top: auto; border-bottom: none; padding-bottom: 0;">
+        <span>Локация</span>
+        <span class="meta">БЕЛГРАД, RS</span>
       </div>
-    </div>
-
+    </section>
   </main>
-
-  <!-- GUESTBOOK SECTION -->
-  <section class="section-block" id="guestbook-section">
-    <div class="section-header">
-      <div class="section-tag">NEW · v3.0</div>
-      <h2 class="section-title">GUEST<span>.</span>LOG</h2>
-      <p class="section-sub">Оставь след. Сообщения хранятся навсегда.</p>
-    </div>
-    <div class="guestbook-card">
-      <div class="gb-form">
-        <div class="gb-form-row">
-          <input type="text" class="gb-input" id="gb-name" placeholder="ПОЗЫВНОЙ / ИМЯ" maxlength="32">
-          <input type="text" class="gb-input" id="gb-city" placeholder="ГОРОД" maxlength="32">
-        </div>
-        <textarea class="gb-textarea" id="gb-msg" placeholder="СООБЩЕНИЕ..." maxlength="280" rows="3"></textarea>
-        <div class="gb-form-footer">
-          <span class="gb-char-count"><span id="gb-chars">0</span>/280</span>
-          <button class="gb-submit" id="gb-submit">
-            <span id="gb-submit-txt">ОТПРАВИТЬ</span>
-            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>
-          </button>
-        </div>
-      </div>
-      <div class="gb-divider"></div>
-      <div class="gb-entries" id="gb-entries">
-        <div class="gb-loading">ЗАГРУЗКА ЗАПИСЕЙ...</div>
-      </div>
-    </div>
-  </section>
-
-  <footer class="ft">
-    <span>© 2026 NIP.SYS v3.0 — НИКИТА ИП</span>
-    <span><span class="hd-dot" style="width:5px;height:5px"></span><span id="local-time"></span></span>
-  </footer>
 </div>
 
 <script src="script.js"></script>

@@ -1,144 +1,101 @@
-```
-███╗   ██╗██╗██████╗    ███████╗██╗   ██╗███████╗
-████╗  ██║██║██╔══██╗   ██╔════╝╚██╗ ██╔╝██╔════╝
-██╔██╗ ██║██║██████╔╝   ███████╗ ╚████╔╝ ███████╗
-██║╚██╗██║██║██╔═══╝    ╚════██║  ╚██╔╝  ╚════██║
-██║ ╚████║██║██║         ███████║   ██║   ███████║
-╚═╝  ╚═══╝╚═╝╚═╝         ╚══════╝   ╚═╝   ╚══════╝
-                                              v3.0
-```
+# 🦅 NIP.SYS — Personal Portfolio
 
-<div align="center">
-
-**`KERNEL BOOT` → `UI MODULES` → `NETWORK SYNC` → `ACCESS GRANTED ✓`**
-
-[![Status](https://img.shields.io/badge/STATUS-ONLINE-4ae87a?style=flat-square&labelColor=0a0a08)](https://chrisredfield48.github.io/ip/)
-[![Version](https://img.shields.io/badge/VERSION-3.0-e8d84a?style=flat-square&labelColor=0a0a08)](https://chrisredfield48.github.io/ip/)
-[![Location](https://img.shields.io/badge/LOCATION-BELGRADE%2C%20RS-ffffff?style=flat-square&labelColor=0a0a08)](https://chrisredfield48.github.io/ip/)
-[![Open To Work](https://img.shields.io/badge/OPEN%20TO%20WORK-YES-4ae87a?style=flat-square&labelColor=0a0a08)](https://t.me/+QpzXesYhdSs1Mzcy)
-
-</div>
+> **Никита Ип** · Web Developer · Belgrade, RS
 
 ---
 
-## `> whoami`
-
-Personal portfolio dashboard of **Nikita Ip** — web developer based in **Belgrade, Serbia**.  
-Building modern interfaces. Planning transfer to Europe by **March 2029**.
-
----
-
-## `> cat stack.txt`
-
-| Layer | Tech | Level |
-|---|---|---|
-| Markup & Styling | HTML / CSS / Figma | `████████████ 100%` |
-| Scripting | JavaScript | `█░░░░░░░░░░░  10%` |
-| Backend / AI | Python | `░░░░░░░░░░░░   0%` |
-| Discipline | — | `███████████░  90%` |
-
-**No frameworks. No build tools. Just pure HTML, CSS and Vanilla JS.**
-
----
-
-## `> ls features/`
-
 ```
-dashboard/
-├── profile-card        # Glitch effect, badges, avatar
-├── uptime-timer        # Live session uptime + countdown to 2029
-├── weather             # Live Belgrade weather via Open-Meteo API
-├── skill-bars          # Animated progress bars
-├── quest-log           # Active / queued goals
-├── terminal            # Interactive CLI with custom commands
-├── mood-selector       # Focus / Grind / Rest / Gym modes
-├── now-playing         # Fake music player with equalizer
-├── hardware            # Device list
-├── projects            # Portfolio links
-├── location-map        # Animated Belgrade coordinates
-└── transfer-stats      # Days until Academy + % progress
-
-sections/
-├── guestbook           # Persistent messages via localStorage
-└── footer              # Local time clock
+███╗   ██╗██╗██████╗       ███████╗██╗   ██╗███████╗
+████╗  ██║██║██╔══██╗      ██╔════╝╚██╗ ██╔╝██╔════╝
+██╔██╗ ██║██║██████╔╝      ███████╗ ╚████╔╝ ███████╗
+██║╚██╗██║██║██╔═══╝       ╚════██║  ╚██╔╝  ╚════██║
+██║ ╚████║██║██║      ███╗ ███████║   ██║   ███████║
+╚═╝  ╚═══╝╚═╝╚═╝      ╚══╝ ╚══════╝   ╚═╝   ╚══════╝
 ```
 
+[![Status](https://img.shields.io/badge/status-online-4ae87a?style=flat-square&logo=circle&logoColor=white)](https://github.com/ChrisRedfield48)
+[![Stack](https://img.shields.io/badge/stack-HTML%20%2F%20CSS%20%2F%20JS-e8d84a?style=flat-square)](https://github.com/ChrisRedfield48)
+[![Location](https://img.shields.io/badge/location-Belgrade%2C%20RS-ffffff?style=flat-square&logo=data:image/png;base64,)](https://github.com/ChrisRedfield48)
+[![Open to Work](https://img.shields.io/badge/open%20to-work-e8d84a?style=flat-square)](https://t.me/+QpzXesYhdSs1Mzcy)
+
 ---
 
-## `> help` — Terminal Commands
+## Описание
 
-| Command | Output |
+Персональный portfolio-сайт в стиле **industrial / brutalist terminal**. Минималистичный тёмный интерфейс с жёлтым акцентом, живыми часами и переключением тем — без лишнего, только суть.
+
+---
+
+## Стек
+
+| Технология | Уровень |
 |---|---|
-| `help` | List all commands |
-| `status` | Current skill levels |
-| `skills` | ASCII skill chart |
-| `projects` | Clickable project links |
-| `about` | Bio summary |
-| `quote` | Random quote |
-| `advice` | Fetch advice from API |
-| `matrix` | 👀 |
-| `danya` | 🔒 ACCESS DENIED |
-| `clear` | Clear terminal |
+| HTML | ████████████ Core |
+| CSS | ████████████ Core |
+| Figma | ████████████ Core |
+| JavaScript | ██░░░░░░░░░░ 15% |
+| Python & AI | ████░░░░░░░░ В процессе |
 
 ---
 
-## `> cat projects.json`
+## Проекты
 
-```json
-[
-  {
-    "name": "Graphic Designer",
-    "type": "UI Design",
-    "url": "https://chrisredfield48.github.io/graphic-designer/"
-  },
-  {
-    "name": "Cyberpunk Promo",
-    "type": "Promo Site",
-    "url": "https://chrisredfield48.github.io/Cyberpunk/"
-  },
-  {
-    "name": "Createx UI",
-    "type": "UI Kit",
-    "url": "https://chrisredfield48.github.io/Createx/"
-  }
-]
+```
+[ UI    ] → Graphic Designer   — chrisredfield48.github.io/graphic-designer
+[ PROMO ] → Cyberpunk Promo    — chrisredfield48.github.io/Cyberpunk
+[ UI KIT] → Createx UI         — chrisredfield48.github.io/Createx
 ```
 
 ---
 
-## `> git clone && run`
+## Инфраструктура
+
+```yaml
+workstation:
+  laptop: MacBook Pro (M-series)
+  desktop: Custom PC (RTX build)
+  editor: VS Code + AI tools
+
+server:
+  os: Ubuntu
+  runtime: Docker
+  type: Homelab
+
+location: Belgrade, RS 🇷🇸
+```
+
+---
+
+## Фичи сайта
+
+- 🕐 **Живые часы** — обновляются каждую секунду
+- 🌗 **Dark / Light режим** — сохраняется в `localStorage`
+- 🛡️ **Загрузка аватара** — кастомный герб в форме щита
+- 📱 **Адаптив** — корректное отображение на мобильных
+- ⚡ **Анимации** — плавающий орёл, пульсирующий щит
+
+---
+
+## Запуск
 
 ```bash
-git clone https://github.com/ChrisRedfield48/ip.git
-cd ip
+git clone https://github.com/ChrisRedfield48/<repo>
+cd <repo>
+# Открыть index.html в браузере
 open index.html
 ```
 
-> No npm. No webpack. No bullshit. Just open the file.
-
 ---
 
-## `> cat roadmap.md`
+## Контакты
 
 ```
-[✓] ACTIVE  — Закончить колледж
-[✓] ACTIVE  — Фарм ресурсов
-[ ] QUEUED  — Изучение Python и ИИ
-[ ] QUEUED  — Поступление в Европу · TARGET: 2029-03-08
+Telegram  →  t.me/+QpzXesYhdSs1Mzcy
+GitHub    →  github.com/ChrisRedfield48
 ```
-
----
-
-## `> ls links/`
-
-[![Telegram](https://img.shields.io/badge/TELEGRAM-JOIN-e8d84a?style=for-the-badge&labelColor=0a0a08)](https://t.me/+QpzXesYhdSs1Mzcy)
-[![GitHub](https://img.shields.io/badge/GITHUB-CHRISREDFIELD48-ffffff?style=for-the-badge&labelColor=0a0a08)](https://github.com/ChrisRedfield48)
-[![Site](https://img.shields.io/badge/SITE-NIP.SYS-4ae87a?style=for-the-badge&labelColor=0a0a08)](https://chrisredfield48.github.io/ip/)
 
 ---
 
 <div align="center">
-
-`© 2026 NIP.SYS v3.0 — НИКИТА ИП · BELGRADE, RS`
-
+  <sub>NIP.SYS · Built with HTML / CSS / JS · 2024</sub>
 </div>
