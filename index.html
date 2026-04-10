@@ -6,10 +6,11 @@
 <title>NIP.SYS — Никита Ип</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@300;400;500&family=Inter+Tight:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@300;400;500&family=Syne:wght@600;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="reset3.css">
 <link rel="stylesheet" href="style.css">
 <link rel="shortcut icon" href="image/изображение-Photoroom.png" type="image/x-icon">
+
 </head>
 <body>
 
@@ -29,19 +30,23 @@
   </header>
 
   <main class="grid">
+
+    <!-- ПРОФИЛЬ -->
     <article class="card profile-card">
-      <label for="coat-of-arms-upload" class="coat-label">
-        <div class="coat-of-arms" id="coat-of-arms-display"><img src="image/изображение-Photoroom.png" alt="🦅"></div>
+      <label for="coat-of-arms-upload" class="coat-label" title="Загрузить фото">
+        <div class="coat-of-arms" id="coat-of-arms-display">
+          <img src="image/изображение-Photoroom.png" alt="🦅">
+        </div>
       </label>
-      <input type="file" id="coat-of-arms-upload" accept="image/*" style="display: none;">
+      <input type="file" id="coat-of-arms-upload" accept="image/*" style="display:none">
 
       <div class="profile-info">
         <div class="badges">
-          <span class="badge active">WEB DEVELOPER</span>
-          <span class="badge">OPEN TO WORK</span>
-          <span class="badge">🇷🇸 СЕРБИЯ</span>
+          <span class="badge active">Web Developer</span>
+          <span class="badge">Open to Work</span>
+          <span class="badge">🇷🇸 Сербия</span>
         </div>
-        <h1>НИКИТА ИП</h1>
+        <h1><span class="typewriter" id="typewriter-name"></span><span class="cursor"></span></h1>
         <p>Создаю современные интерфейсы. Развиваю личные проекты, пишу код, планирую трансфер в Европу.</p>
         <div class="links">
           <a href="https://t.me/+QpzXesYhdSs1Mzcy" target="_blank" class="btn">Telegram ↗</a>
@@ -50,28 +55,41 @@
       </div>
     </article>
 
+    <!-- СТЕК -->
     <section class="card">
       <div class="card-title">Стек и обучение</div>
-      <div class="list-item">
-        <span>HTML / CSS / Figma</span>
-        <span class="meta">Core</span>
-      </div>
-      <div class="list-item">
-        <span>JavaScript</span>
-        <span class="meta">15%</span>
-      </div>
-      
-      <div class="status-module">
-        <div class="list-item" style="border:none; padding:0;">
-          <span style="font-size: 0.8rem; color: var(--text-muted);">Статус: Обучение Python & AI</span>
-          <span class="meta" style="color: var(--accent);">В процессе</span>
+
+      <div class="skill-block">
+        <div class="skill-header">
+          <span>HTML / CSS / Figma</span>
+          <span class="pct">85%</span>
         </div>
-        <div class="progress-bar">
-          <div class="progress-fill"></div>
+        <div class="bar-track"><div class="bar-fill" data-width="85"></div></div>
+      </div>
+
+      <div class="skill-block">
+        <div class="skill-header">
+          <span>JavaScript</span>
+          <span class="pct">15%</span>
         </div>
+        <div class="bar-track"><div class="bar-fill" data-width="15"></div></div>
+      </div>
+
+      <div class="skill-block">
+        <div class="skill-header">
+          <span>Python / AI</span>
+          <span class="pct">10%</span>
+        </div>
+        <div class="bar-track"><div class="bar-fill" data-width="10"></div></div>
+      </div>
+
+      <div class="status-label">
+        <span>Активный курс</span>
+        <span>Python & AI — В процессе</span>
       </div>
     </section>
 
+    <!-- ПРОЕКТЫ -->
     <section class="card">
       <div class="card-title">Проекты</div>
       <a href="https://chrisredfield48.github.io/graphic-designer/" target="_blank" class="proj-link">
@@ -86,33 +104,52 @@
         <span>Createx UI</span>
         <span class="meta">UI KIT</span>
       </a>
+      <a href="https://chrisredfield48.github.io/nip-sys/" target="_blank" class="proj-link" style="opacity:0.45; pointer-events:none;">
+        <span>NIP.SYS v2</span>
+        <span class="meta">SOON</span>
+      </a>
     </section>
 
+    <!-- ИНФРАСТРУКТУРА -->
     <section class="card">
       <div class="card-title">Инфраструктура</div>
-      <div class="list-item">
-        <span>MacBook Pro</span>
+      <div class="infra-item online">
+        <div class="infra-left"><div class="infra-dot"></div><span>MacBook Pro</span></div>
         <span class="meta">M-SERIES</span>
       </div>
-      <div class="list-item">
-        <span>Custom PC</span>
+      <div class="infra-item online">
+        <div class="infra-left"><div class="infra-dot"></div><span>Custom PC</span></div>
         <span class="meta">RTX BUILD</span>
       </div>
-      <div class="list-item">
-        <span>Рабочая среда</span>
+      <div class="infra-item online">
+        <div class="infra-left"><div class="infra-dot"></div><span>Рабочая среда</span></div>
         <span class="meta">VS CODE + AI</span>
       </div>
-      <div class="list-item">
-        <span>Homelab Server</span>
+      <div class="infra-item">
+        <div class="infra-left"><div class="infra-dot"></div><span>Homelab Server</span></div>
         <span class="meta">UBUNTU / DOCKER</span>
       </div>
-      <div class="list-item" style="margin-top: auto; border-bottom: none; padding-bottom: 0;">
-        <span>Локация</span>
+      <div class="infra-item" style="border-bottom:none; padding-bottom:0; margin-top:auto;">
+        <div class="infra-left"><div class="infra-dot"></div><span>Локация</span></div>
         <span class="meta">БЕЛГРАД, RS</span>
       </div>
     </section>
+
+    <!-- ГОСТЕВАЯ КНИГА -->
+    <section class="card" style="grid-column: 1 / -1;">
+      <div class="card-title">Гостевая книга</div>
+      <div class="guestbook-form">
+        <input id="gb-name-input" class="gb-input" type="text" placeholder="Имя / ник" maxlength="32">
+        <textarea id="gb-msg-input" class="gb-input" placeholder="Оставьте сообщение..." maxlength="200" rows="2"></textarea>
+        <button class="gb-submit" id="gb-submit-btn">Отправить →</button>
+      </div>
+      <div class="gb-entries" id="gb-entries">
+        <div class="gb-empty" id="gb-empty">Пока пусто. Будь первым!</div>
+      </div>
+    </section>
+
   </main>
-</div>New site
+</div>
 
 <script src="script.js"></script>
 </body>

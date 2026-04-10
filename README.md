@@ -1,101 +1,107 @@
 # 🦅 NIP.SYS — Personal Portfolio
 
-> **Никита Ип** · Web Developer · Belgrade, RS
+Персональный сайт-портфолио **Никиты Ип** — веб-разработчика из Белграда.
+
+![Static Badge](https://img.shields.io/badge/HTML-Core-e8d84a?style=flat-square)
+![Static Badge](https://img.shields.io/badge/CSS-Core-e8d84a?style=flat-square)
+![Static Badge](https://img.shields.io/badge/JavaScript-Vanilla-e8d84a?style=flat-square)
+![Static Badge](https://img.shields.io/badge/No_Framework-Pure_Code-555?style=flat-square)
 
 ---
+
+## 📁 Структура проекта
 
 ```
-███╗   ██╗██╗██████╗       ███████╗██╗   ██╗███████╗
-████╗  ██║██║██╔══██╗      ██╔════╝╚██╗ ██╔╝██╔════╝
-██╔██╗ ██║██║██████╔╝      ███████╗ ╚████╔╝ ███████╗
-██║╚██╗██║██║██╔═══╝       ╚════██║  ╚██╔╝  ╚════██║
-██║ ╚████║██║██║      ███╗ ███████║   ██║   ███████║
-╚═╝  ╚═══╝╚═╝╚═╝      ╚══╝ ╚══════╝   ╚═╝   ╚══════╝
-```
-
-[![Status](https://img.shields.io/badge/status-online-4ae87a?style=flat-square&logo=circle&logoColor=white)](https://github.com/ChrisRedfield48)
-[![Stack](https://img.shields.io/badge/stack-HTML%20%2F%20CSS%20%2F%20JS-e8d84a?style=flat-square)](https://github.com/ChrisRedfield48)
-[![Location](https://img.shields.io/badge/location-Belgrade%2C%20RS-ffffff?style=flat-square&logo=data:image/png;base64,)](https://github.com/ChrisRedfield48)
-[![Open to Work](https://img.shields.io/badge/open%20to-work-e8d84a?style=flat-square)](https://t.me/+QpzXesYhdSs1Mzcy)
-
----
-
-## Описание
-
-Персональный portfolio-сайт в стиле **industrial / brutalist terminal**. Минималистичный тёмный интерфейс с жёлтым акцентом, живыми часами и переключением тем — без лишнего, только суть.
-
----
-
-## Стек
-
-| Технология | Уровень |
-|---|---|
-| HTML | ████████████ Core |
-| CSS | ████████████ Core |
-| Figma | ████████████ Core |
-| JavaScript | ██░░░░░░░░░░ 15% |
-| Python & AI | ████░░░░░░░░ В процессе |
-
----
-
-## Проекты
-
-```
-[ UI    ] → Graphic Designer   — chrisredfield48.github.io/graphic-designer
-[ PROMO ] → Cyberpunk Promo    — chrisredfield48.github.io/Cyberpunk
-[ UI KIT] → Createx UI         — chrisredfield48.github.io/Createx
+nip-sys/
+├── index.html       # Разметка страницы
+├── style.css        # Стили, переменные, анимации
+├── script.js        # Логика: часы, тема, typewriter, гостевая книга
+├── image/
+│   └── изображение-Photoroom.png  # Аватар / герб
+└── README.md
 ```
 
 ---
 
-## Инфраструктура
+## ✨ Фичи
 
-```yaml
-workstation:
-  laptop: MacBook Pro (M-series)
-  desktop: Custom PC (RTX build)
-  editor: VS Code + AI tools
+- **Dark / Light тема** — переключается кнопкой, сохраняется в `localStorage`
+- **Живые часы** — обновляются каждую секунду в реальном времени
+- **Typewriter-эффект** — имя печатается при загрузке страницы
+- **Skill bars** — анимируются при попадании карточки в viewport (IntersectionObserver)
+- **Гостевая книга** — сообщения сохраняются в `localStorage`, без бэкенда
+- **Загрузка аватара** — клик по гербу открывает выбор файла
+- **Noise-текстура** — тонкая зернистость фона через inline SVG-фильтр
+- **Staggered-анимация** — карточки появляются последовательно при загрузке
+- **Адаптив** — корректно отображается на мобильных устройствах
 
-server:
-  os: Ubuntu
-  runtime: Docker
-  type: Homelab
+---
 
-location: Belgrade, RS 🇷🇸
+## 🚀 Запуск
+
+Просто открой `index.html` в браузере — никакой сборки не нужно.
+
+Или через Live Server в VS Code:
+
+```
+Правой кнопкой по index.html → Open with Live Server
 ```
 
----
-
-## Фичи сайта
-
-- 🕐 **Живые часы** — обновляются каждую секунду
-- 🌗 **Dark / Light режим** — сохраняется в `localStorage`
-- 🛡️ **Загрузка аватара** — кастомный герб в форме щита
-- 📱 **Адаптив** — корректное отображение на мобильных
-- ⚡ **Анимации** — плавающий орёл, пульсирующий щит
-
----
-
-## Запуск
+Для деплоя на GitHub Pages:
 
 ```bash
-git clone https://github.com/ChrisRedfield48/<repo>
-cd <repo>
-# Открыть index.html в браузере
-open index.html
+git init
+git add .
+git commit -m "init"
+git branch -M main
+git remote add origin https://github.com/USERNAME/REPO.git
+git push -u origin main
+```
+
+Затем в Settings репозитория → Pages → Source: `main / root`.
+
+---
+
+## 🎨 Дизайн-система
+
+Все цвета вынесены в CSS-переменные в `:root`. Переключение темы меняет только значения переменных.
+
+| Переменная | Dark | Light |
+|---|---|---|
+| `--bg` | `#0a0a09` | `#f2f0ea` |
+| `--bg-card` | `#111110` | `#fafaf7` |
+| `--accent` | `#e8d84a` | `#c49a00` |
+| `--text` | `#ede8df` | `#18180f` |
+| `--text-muted` | `#7a7872` | `#777068` |
+
+**Шрифты:**
+- `Syne 800` — заголовки
+- `DM Mono` — основной текст, монотипные элементы
+
+---
+
+## 🧩 Секции
+
+| Секция | Описание |
+|---|---|
+| **Профиль** | Имя, бейджи, ссылки на Telegram и GitHub |
+| **Стек и обучение** | Skill bars с анимацией по скроллу |
+| **Проекты** | Ссылки на задеплоенные работы |
+| **Инфраструктура** | Рабочие инструменты и устройства |
+| **Гостевая книга** | Форма для сообщений с локальным хранением |
+
+---
+
+## 📦 Зависимости
+
+Внешних зависимостей нет. Только Google Fonts через CDN:
+
+```html
+https://fonts.googleapis.com/css2?family=DM+Mono:wght@300;400;500&family=Syne:wght@600;700;800
 ```
 
 ---
 
-## Контакты
+## 📄 Лицензия
 
-```
-Telegram  →  t.me/+QpzXesYhdSs1Mzcy
-GitHub    →  github.com/ChrisRedfield48
-```
-
----
-
-<div align="center">
-  <sub>NIP.SYS · Built with HTML / CSS / JS · 2024</sub>
-</div>
+Personal project — all rights reserved © Nikita Ip
