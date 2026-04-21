@@ -10,9 +10,14 @@
 <link rel="stylesheet" href="reset3.css">
 <link rel="stylesheet" href="style.css">
 <link rel="shortcut icon" href="image/изображение-Photoroom.png" type="image/x-icon">
-
 </head>
 <body>
+
+<!-- Scroll progress bar -->
+<div id="scroll-bar" class="scroll-bar"></div>
+
+<!-- Matrix canvas overlay -->
+<canvas id="matrix-canvas" class="matrix-canvas"></canvas>
 
 <div class="container">
   <header class="header">
@@ -135,12 +140,32 @@
       </div>
     </section>
 
+    <!-- GITHUB STATS -->
+    <section class="card">
+      <div class="card-title">GitHub</div>
+      <div id="gh-stats" class="gh-stats">
+        <div class="gh-loading">
+          <span class="gh-spinner"></span>
+          <span style="font-size:0.72rem; color:var(--text-muted)">Загрузка...</span>
+        </div>
+      </div>
+      <a href="https://github.com/ChrisRedfield48" target="_blank" class="btn" style="margin-top: auto; width:fit-content; align-self:flex-start;">
+        Открыть GitHub ↗
+      </a>
+    </section>
+
+    <!-- ROADMAP -->
+    <section class="card">
+      <div class="card-title">Дорожная карта</div>
+      <div id="roadmap-goals" class="roadmap-goals"></div>
+    </section>
+
     <!-- ГОСТЕВАЯ КНИГА -->
     <section class="card" style="grid-column: 1 / -1;">
-      <div class="card-title">Гостевая книга</div>
+      <div class="card-title">Гостевая книга <span class="hint-text">· попробуй /help</span></div>
       <div class="guestbook-form">
         <input id="gb-name-input" class="gb-input" type="text" placeholder="Имя / ник" maxlength="32">
-        <textarea id="gb-msg-input" class="gb-input" placeholder="Оставьте сообщение..." maxlength="200" rows="2"></textarea>
+        <textarea id="gb-msg-input" class="gb-input" placeholder="Оставь сообщение... (Ctrl+Enter — отправить)" maxlength="200" rows="2"></textarea>
         <button class="gb-submit" id="gb-submit-btn">Отправить →</button>
       </div>
       <div class="gb-entries" id="gb-entries">
@@ -149,6 +174,12 @@
     </section>
 
   </main>
+
+  <footer class="footer">
+    <span>NIP.SYS © 2025</span>
+    <span>Сделано с ☕ в Белграде</span>
+    <span class="footer-hint">↑↑↓↓←→←→BA</span>
+  </footer>
 </div>
 
 <script src="script.js"></script>
