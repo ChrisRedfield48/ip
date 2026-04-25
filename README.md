@@ -1,50 +1,103 @@
 <div align="center">
 
-# 🖥️ NIP.SYS _ portfolio v3.0
+```
+███╗   ██╗██╗██████╗     ███████╗██╗   ██╗███████╗
+████╗  ██║██║██╔══██╗    ██╔════╝╚██╗ ██╔╝██╔════╝
+██╔██╗ ██║██║██████╔╝    ███████╗ ╚████╔╝ ███████╗
+██║╚██╗██║██║██╔═══╝     ╚════██║  ╚██╔╝  ╚════██║
+██║ ╚████║██║██║         ███████║   ██║   ███████║
+╚═╝  ╚═══╝╚═╝╚═╝         ╚══════╝   ╚═╝   ╚══════╝
+```
 
-**Никита Ип | WEB DEVELOPER**
+### `portfolio v3.0` · **Никита Ип** · Web Developer
 
-[![GitHub](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/ChrisRedfield48)
-[![Telegram](https://img.shields.io/badge/Telegram-2CA5E0?style=for-the-badge&logo=telegram&logoColor=white)](#)
+[![Status](https://img.shields.io/badge/status-OPEN_TO_WORK-c8f050?style=flat-square&labelColor=0c0c0c)](https://chrisredfield48.github.io)
+[![Location](https://img.shields.io/badge/location-Белград_·_RS-555?style=flat-square&labelColor=0c0c0c)](https://chrisredfield48.github.io)
+[![GitHub](https://img.shields.io/badge/GitHub-ChrisRedfield48-fff?style=flat-square&logo=github&labelColor=0c0c0c)](https://github.com/ChrisRedfield48)
+[![Telegram](https://img.shields.io/badge/Telegram-contact-2CA5E0?style=flat-square&logo=telegram&labelColor=0c0c0c)](https://t.me/+QpzXesYhdSs1Mzcy)
 
 </div>
 
 ---
 
-## 🗺️ ROADMAP
+```
+> SYSTEM BOOT...
+> LOADING NIP.SYS v3.0...
+> CONNECTION ESTABLISHED ✓
+```
 
-```text
-09:14  ✓ HTML/CSS       — освоен
-сейчас → JavaScript     — в процессе
-скоро  ○ React, Node.js — ожидание
-Дополнительные направления:
+## `[01]` СТЕК
 
-    Python & AI — [▓░░░░░░░░░] 2%
+| Технология | Прогресс | Статус |
+|---|---|---|
+| HTML / CSS / Figma | `████████░░` 85% | ✅ освоен |
+| JavaScript | `██░░░░░░░░` 15% | 🔄 в процессе |
+| Python / AI | `█░░░░░░░░░` 10% | ⏳ ожидание |
+| React.js | `░░░░░░░░░░` 0% | ⏳ ожидание |
+| Node.js | `░░░░░░░░░░` 0% | ⏳ ожидание |
 
-    Node.js     — [░░░░░░░░░░] 0%
+---
 
-📁 ПРОЕКТЫ
-Проект	Ссылка	Тег
-Graphic Designer	chrisredfield48.github.io/graphic-designer	UI
-Cyberpunk Promo	chrisredfield48.github.io/Cyberpunk	PROMO
-Createx UI	chrisredfield48.github.io/Createx	UI KIT
-NIP.SYS v3	— в разработке —	SOON
-⚙️ ИНФРАСТРУКТУРА
+## `[02]` ПРОЕКТЫ
 
-    🟢 MacBook Pro [ Pro-series ]
+```
+┌─────────────────────────────────────────────────────────────┐
+│  #   ПРОЕКТ              ССЫЛКА                      ТЕГ   │
+├─────────────────────────────────────────────────────────────┤
+│  01  Graphic Designer    /graphic-designer           [UI]   │
+│  02  Cyberpunk Promo     /Cyberpunk                [PROMO]  │
+│  03  Createx UI          /Createx                 [UI KIT]  │
+│  04  Projects Hub        /Projects                  [HUB]   │
+│  05  NIP.SYS v3          — в разработке —           [SOON]  │
+└─────────────────────────────────────────────────────────────┘
+```
 
-    🟢 Custom PC [ RTX Build ]
+🔗 **[chrisredfield48.github.io](https://chrisredfield48.github.io)**
 
-    🟢 VS Code + AI [ Dev env ]
+---
 
-    🔘 Homelab [ Ubuntu/Docker ]
+## `[03]` ROADMAP
 
-    🟢 Локация [ Белград, RS ]
-[ 10 ] Репозитории
-[  0 ] Подписчики
-[  0 ] Звёзды
+```
+09:14  ✓  HTML / CSS         ──────────────────── DONE
+сейчас →  JavaScript         ████░░░░░░░░░░░░░░░  WIP
+скоро  ○  React.js           ░░░░░░░░░░░░░░░░░░░  QUEUE
+скоро  ○  Node.js            ░░░░░░░░░░░░░░░░░░░  QUEUE
+позже  ○  Python & AI        ░░░░░░░░░░░░░░░░░░░  QUEUE
+```
 
-> [github.com/ChrisRedfield48](https://github.com/ChrisRedfield48) ↗
-💬 ГОСТЕВАЯ КНИГА · /HELP
+---
 
-Для связи и отправки сообщений используйте контакты в шапке профиля.
+## `[04]` ИНФРАСТРУКТУРА
+
+```
+🟢  MacBook Pro          [ Pro-series ]
+🟢  Custom PC            [ RTX Build  ]
+🟢  VS Code + AI         [ Dev env    ]
+⚫  Homelab              [ Ubuntu / Docker ]
+🟢  Локация              [ Белград, RS ]
+```
+
+---
+
+## `[05]` GITHUB STATS
+
+<div align="center">
+
+[![GitHub Stats](https://github-readme-stats.vercel.app/api?username=ChrisRedfield48&show_icons=true&theme=dark&bg_color=0c0c0c&border_color=222&icon_color=c8f050&title_color=c8f050&text_color=e8e4dc&hide_border=false)](https://github.com/ChrisRedfield48)
+
+[![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=ChrisRedfield48&layout=compact&theme=dark&bg_color=0c0c0c&border_color=222&title_color=c8f050&text_color=e8e4dc)](https://github.com/ChrisRedfield48)
+
+</div>
+
+---
+
+<div align="center">
+
+`NIP.SYS © 2025 · Белград · RS`
+
+```
+↑↑↓↓←→←→BA
+```
+
+</div>
