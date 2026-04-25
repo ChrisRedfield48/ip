@@ -75,7 +75,7 @@
 🟢  Custom PC            [ RTX Build  ]
 🟢  VS Code + AI         [ Dev env    ]
 ⚫  Homelab              [ Ubuntu / Docker ]
-🟢  Локация              [ Белград, RS ]
+🟢  Локация              [ Russia, RU ]
 ```
 
 ---
