@@ -1,92 +1,132 @@
 <div align="center">
 
 ```
-███╗   ██╗██╗██████╗     ███████╗██╗   ██╗███████╗
-████╗  ██║██║██╔══██╗    ██╔════╝╚██╗ ██╔╝██╔════╝
-██╔██╗ ██║██║██████╔╝    ███████╗ ╚████╔╝ ███████╗
-██║╚██╗██║██║██╔═══╝     ╚════██║  ╚██╔╝  ╚════██║
-██║ ╚████║██║██║         ███████║   ██║   ███████║
-╚═╝  ╚═══╝╚═╝╚═╝         ╚══════╝   ╚═╝   ╚══════╝
+███╗   ██╗██╗██████╗    ███████╗██╗   ██╗███████╗
+████╗  ██║██║██╔══██╗   ██╔════╝╚██╗ ██╔╝██╔════╝
+██╔██╗ ██║██║██████╔╝   ███████╗ ╚████╔╝ ███████╗
+██║╚██╗██║██║██╔═══╝    ╚════██║  ╚██╔╝  ╚════██║
+██║ ╚████║██║██║        ███████║   ██║   ███████║
+╚═╝  ╚═══╝╚═╝╚═╝        ╚══════╝   ╚═╝   ╚══════╝
 ```
 
-### `portfolio v3.0` · **Никита Ип** · Web Developer
+### `python.log` — learning path & dev journal
 
-[![Status](https://img.shields.io/badge/status-OPEN_TO_WORK-c8f050?style=flat-square&labelColor=0c0c0c)](https://chrisredfield48.github.io)
-[![Location](https://img.shields.io/badge/location-Белград_·_RS-555?style=flat-square&labelColor=0c0c0c)](https://chrisredfield48.github.io)
-[![GitHub](https://img.shields.io/badge/GitHub-ChrisRedfield48-fff?style=flat-square&logo=github&labelColor=0c0c0c)](https://github.com/ChrisRedfield48)
-[![Telegram](https://img.shields.io/badge/Telegram-contact-2CA5E0?style=flat-square&logo=telegram&labelColor=0c0c0c)](https://t.me/+QpzXesYhdSs1Mzcy)
+![Status](https://img.shields.io/badge/status-in_progress-c8f050?style=flat-square&labelColor=0c0c0c)
+![Python](https://img.shields.io/badge/python-3.12-c8f050?style=flat-square&labelColor=0c0c0c&logo=python&logoColor=c8f050)
+![Stage](https://img.shields.io/badge/stage-core_syntax-555?style=flat-square&labelColor=0c0c0c)
+![Made by](https://img.shields.io/badge/by-nip.sys-c8f050?style=flat-square&labelColor=0c0c0c)
 
 </div>
 
 ---
 
-```
-> SYSTEM BOOT...
-> LOADING NIP.SYS v3.0...
-> CONNECTION ESTABLISHED ✓
-```
+## `> whoami`
 
-## `[01]` СТЕК
+Изучаю Python — с нуля, методом реальных проектов. Цель: от синтаксиса до интеграции с LLM и собственных нейросетей. Это не курс — это личный dev-журнал с кодом, прогрессом и проектами.
 
-| Технология | Прогресс | Статус |
-|---|---|---|
-| HTML / CSS / Figma | `████████░░` 85% | ✅ освоен |
-| JavaScript | `██░░░░░░░░` 15% | 🔄 в процессе |
-| Python / AI | `█░░░░░░░░░` 10% | ⏳ ожидание |
-| React.js | `░░░░░░░░░░` 0% | ⏳ ожидание |
-| Node.js | `░░░░░░░░░░` 0% | ⏳ ожидание |
-
----
-
-## `[02]` ПРОЕКТЫ
-
-```
-┌─────────────────────────────────────────────────────────────┐
-│  #   ПРОЕКТ              ССЫЛКА                      ТЕГ   │
-├─────────────────────────────────────────────────────────────┤
-│  01  Graphic Designer    /graphic-designer           [UI]   │
-│  02  Cyberpunk Promo     /Cyberpunk                [PROMO]  │
-│  03  Createx UI          /Createx                 [UI KIT]  │
-│  04  Projects Hub        /Projects                  [HUB]   │
-│  05  NIP.SYS v3          — в разработке —           [SOON]  │
-└─────────────────────────────────────────────────────────────┘
-```
-
-🔗 **[chrisredfield48.github.io](https://chrisredfield48.github.io)**
-
----
-
-## `[03]` ROADMAP
-
-```
-09:14  ✓  HTML / CSS         ──────────────────── DONE
-сейчас →  JavaScript         ████░░░░░░░░░░░░░░░  WIP
-скоро  ○  React.js           ░░░░░░░░░░░░░░░░░░░  QUEUE
-скоро  ○  Node.js            ░░░░░░░░░░░░░░░░░░░  QUEUE
-позже  ○  Python & AI        ░░░░░░░░░░░░░░░░░░░  QUEUE
+```python
+developer = {
+    "name":     "Никита Ип",
+    "alias":    "nip.sys",
+    "base":     "Russia, RU",
+    "goal":     "Python → ML → LLM → собственная нейросеть",
+    "method":   "learn by building",
+    "status":   "🟢 active",
+}
 ```
 
 ---
 
-## `[04]` ИНФРАСТРУКТУРА
+## `> roadmap --verbose`
 
 ```
-🟢  MacBook Pro          [ Pro-series ]
-🟢  Custom PC            [ RTX Build  ]
-🟢  VS Code + AI         [ Dev env    ]
-⚫  Homelab              [ Ubuntu / Docker ]
-🟢  Локация              [ Russia, RU ]
+[ ] Синтаксис Python .............. 0%   ← старт
+[ ] ООП & алгоритмы ............... 0%
+[ ] NumPy / Pandas ................. 0%
+[ ] LLM API интеграция ............. 0%
+[ ] PyTorch / TensorFlow ........... 0%
+[ ] Собственная нейросеть .......... 0%   ← финал
+```
+
+> Прогресс обновляется по мере прохождения этапов.
+
+---
+
+## `> ls ./projects`
+
+### 🐍 `calculator.py` — **DONE**
+
+> Консольный калькулятор на чистом Python.
+
+- Базовые арифметические операции
+- Обработка исключений (`ZeroDivisionError`, `ValueError`)
+- Валидация пользовательского ввода
+- Чистая структура без внешних зависимостей
+
+```python
+# пример
+>>> calc.run()
+> 10 / 0
+! ZeroDivisionError: нельзя делить на ноль
 ```
 
 ---
 
-## `[05]` GITHUB STATS
+### 🤖 `llm_tool.py` — **SOON**
+
+> Интеграция с языковыми моделями через API.
+
+- Работа с OpenAI / Anthropic API
+- Построение промпт-цепочек
+- Парсинг и подготовка данных для AI
+- CLI-инструменты на базе LLM
+
+---
+
+### 🧠 `neural_net.py` — **QUEUE**
+
+> Первая нейросеть с нуля.
+
+- PyTorch или TensorFlow
+- Распознавание изображений или предсказание данных
+- Документация каждого шага обучения
+
+---
+
+## `> stack --current`
+
+| Инструмент | Статус |
+|---|---|
+| Python 3.12 | 🟢 установлен |
+| VS Code + Pylance | 🟢 активен |
+| NumPy / Pandas | ⚪ в планах |
+| PyTorch | ⚪ в планах |
+| Jupyter Notebook | ⚪ в планах |
+
+---
+
+## `> tree`
+
+```
+python/
+├── calculator/
+│   └── main.py
+├── llm_tools/          ← soon
+│   └── ...
+├── neural_net/         ← queue
+│   └── ...
+└── README.md
+```
+
+---
+
+## `> connect`
 
 <div align="center">
 
-[![GitHub Stats](https://github-readme-stats.vercel.app/api?username=ChrisRedfield48&show_icons=true&theme=dark&bg_color=0c0c0c&border_color=222&icon_color=c8f050&title_color=c8f050&text_color=e8e4dc&hide_border=false)](https://github.com/ChrisRedfield48)
-
-[![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=ChrisRedfield48&layout=compact&theme=dark&bg_color=0c0c0c&border_color=222&title_color=c8f050&text_color=e8e4dc)](https://github.com/ChrisRedfield48)
+[![Portfolio](https://img.shields.io/badge/nip.sys-portfolio-c8f050?style=flat-square&labelColor=0c0c0c)](https://chrisredfield48.github.io/ip/)
+[![GitHub](https://img.shields.io/badge/github-ChrisRedfield48-c8f050?style=flat-square&labelColor=0c0c0c&logo=github&logoColor=c8f050)](https://github.com/ChrisRedfield48)
+[![Telegram](https://img.shields.io/badge/telegram-contact-c8f050?style=flat-square&labelColor=0c0c0c&logo=telegram&logoColor=c8f050)](https://t.me/+QpzXesYhdSs1Mzcy)
 
 </div>
 
@@ -94,10 +134,6 @@
 
 <div align="center">
 
-`NIP.SYS © 2025 · Белград · RS`
-
-```
-↑↑↓↓←→←→BA
-```
+`NIP.SYS © 2025` · `python.log` · `learn by building`
 
 </div>
