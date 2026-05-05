@@ -49,7 +49,7 @@
       <a href="#roadmap" class="nav-item"><span class="ni">03</span> Roadmap</a>
       <a href="#github" class="nav-item"><span class="ni">04</span> GitHub</a>
       <a href="#infra" class="nav-item"><span class="ni">05</span> Инфра</a>
-      <a href="#guestbook" class="nav-item"><span class="ni">06</span> Гостевая</a>
+      <a href="#contacts" class="nav-item"><span class="ni">06</span> Контакты</a>
     </nav>
 
     <div class="sidebar-footer">
@@ -57,6 +57,16 @@
       <a href="https://github.com/ChrisRedfield48" target="_blank" class="sb-btn">GH ↗</a>
     </div>
   </aside>
+
+  <!-- MOBILE BOTTOM NAV -->
+  <nav class="mobile-nav">
+    <a href="#stack" class="mn-item active"><span class="mn-num">01</span><span>Стек</span></a>
+    <a href="#projects" class="mn-item"><span class="mn-num">02</span><span>Проекты</span></a>
+    <a href="#roadmap" class="mn-item"><span class="mn-num">03</span><span>Road</span></a>
+    <a href="#github" class="mn-item"><span class="mn-num">04</span><span>GitHub</span></a>
+    <a href="#infra" class="mn-item"><span class="mn-num">05</span><span>Инфра</span></a>
+    <a href="#contacts" class="mn-item"><span class="mn-num">06</span><span>Контакты</span></a>
+  </nav>
 
   <!-- MAIN -->
   <main class="main" id="main">
@@ -71,13 +81,12 @@
         <span class="badge">Open to Work</span>
         <span class="badge">HTML / CSS</span>
         <span class="badge">JavaScript</span>
-        <span class="badge">Python</span>
       </div>
     </div>
 
     <!-- STACK + ROADMAP -->
     <div class="panel-row cols-2" id="stack">
-      <div class="panel">
+      <div class="panel reveal">
         <div class="panel-label">Стек</div>
         <div class="skill">
           <div class="skill-top"><span>HTML / CSS / Figma</span><span class="skill-pct">85%</span></div>
@@ -98,7 +107,7 @@
         </div>
       </div>
 
-      <div class="panel" id="roadmap">
+      <div class="panel reveal" id="roadmap">
         <div class="panel-label">Roadmap</div>
         <div class="rm-item done">
           <span class="rm-check done">✓</span>
@@ -130,7 +139,7 @@
 
     <!-- PROJECTS -->
     <div class="panel-row cols-1" id="projects">
-      <div class="panel">
+      <div class="panel reveal">
         <div class="panel-label">Проекты</div>
         <a href="https://chrisredfield48.github.io/graphic-designer/" target="_blank" class="proj">
           <div>
@@ -182,22 +191,22 @@
             <span class="proj-arrow">↗</span>
           </div>
         </a>
-        <div class="proj" style="opacity:0.25;pointer-events:none">
+        <a href="https://chrisredfield48.github.io" target="_blank" class="proj">
           <div>
             <div class="proj-title">NIP.SYS v3</div>
-            <div class="proj-sub">— в разработке —</div>
+            <div class="proj-sub">chrisredfield48.github.io</div>
           </div>
           <div style="display:flex;align-items:center;gap:8px">
-            <span class="proj-tag">Soon</span>
-            <span class="proj-arrow">—</span>
+            <span class="proj-tag">Portfolio</span>
+            <span class="proj-arrow">↗</span>
           </div>
-        </div>
+        </a>
       </div>
     </div>
 
     <!-- GITHUB + INFRA -->
     <div class="panel-row cols-2" id="github">
-      <div class="panel">
+      <div class="panel reveal">
         <div class="panel-label">GitHub Stats</div>
         <div style="display:flex;gap:8px;margin-bottom:16px">
           <div class="gh-stat">
@@ -218,7 +227,7 @@
         </a>
       </div>
 
-      <div class="panel" id="infra">
+      <div class="panel reveal" id="infra">
         <div class="panel-label">Инфраструктура</div>
         <div class="infra-row">
           <div class="infra-l"><div class="i-dot on"></div><span>MacBook Pro</span></div>
@@ -238,31 +247,51 @@
         </div>
         <div class="infra-row">
           <div class="infra-l"><div class="i-dot on"></div><span>Локация</span></div>
-          <span class="i-tag">Russia, RU</span>
+          <span class="i-tag">Russia → Belgrade</span>
         </div>
       </div>
     </div>
 
-    <!-- GUESTBOOK -->
-    <div class="panel-row cols-1" id="guestbook">
-      <div class="panel">
-        <div class="panel-label">Гостевая книга <span style="color:var(--muted);font-size:9px;letter-spacing:1px">· /help</span></div>
-        <div class="gb-form">
-          <div class="gb-row">
-            <input id="gb-name" class="gb-input" type="text" placeholder="имя / ник" maxlength="32" autocomplete="off" style="max-width:180px">
-            <button id="gb-send" class="gb-send">→ Отправить</button>
-          </div>
-          <textarea id="gb-msg" class="gb-input" placeholder="сообщение... (ctrl+enter)" maxlength="200" rows="2"></textarea>
+    <!-- CONTACTS -->
+    <div class="panel-row cols-2" id="contacts">
+      <div class="panel reveal">
+        <div class="panel-label">Статус</div>
+        <div class="infra-row">
+          <div class="infra-l"><div class="i-dot on"></div><span>Open to Work</span></div>
+          <span class="i-tag">Доступен</span>
         </div>
-        <div id="gb-list" class="gb-list">
-          <div class="gb-empty" id="gb-empty">_ Пока пусто. Будь первым.</div>
+        <div class="infra-row">
+          <div class="infra-l"><div class="i-dot on"></div><span>Локация</span></div>
+          <span class="i-tag">Russia → Belgrade</span>
         </div>
+        <div class="infra-row">
+          <div class="infra-l"><div class="i-dot on"></div><span>Часовой пояс</span></div>
+          <span class="i-tag">UTC+3</span>
+        </div>
+        <div class="infra-row">
+          <div class="infra-l"><div class="i-dot"></div><span>Релокация</span></div>
+          <span class="i-tag">Планируется</span>
+        </div>
+      </div>
+
+      <div class="panel reveal">
+        <div class="panel-label">Связь</div>
+        <a href="https://t.me/+QpzXesYhdSs1Mzcy" target="_blank" class="contact-row">
+          <span class="contact-icon">TG</span>
+          <span class="contact-label">Telegram</span>
+          <span class="contact-arrow">↗</span>
+        </a>
+        <a href="https://github.com/ChrisRedfield48" target="_blank" class="contact-row">
+          <span class="contact-icon">GH</span>
+          <span class="contact-label">GitHub</span>
+          <span class="contact-arrow">↗</span>
+        </a>
       </div>
     </div>
 
     <!-- FOOTER -->
     <div style="padding: 16px 20px; border-top: 1px solid var(--border); display: flex; justify-content: space-between; align-items: center;">
-      <span style="font-family:var(--mono);font-size:10px;color:var(--muted)">NIP.SYS © 2025 · Белград</span>
+      <span style="font-family:var(--mono);font-size:10px;color:var(--muted)">NIP.SYS © 2026 · Белград → Европа</span>
       <span style="font-family:var(--mono);font-size:9px;color:var(--muted);letter-spacing:2px;opacity:0.3">↑↑↓↓←→←→BA</span>
     </div>
 
