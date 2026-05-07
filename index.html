@@ -1,306 +1,182 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="ru" data-lang="ru">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>nip.exe</title>
-<link rel="shortcut icon" href="image/изображение-Photoroom(1).png" type="image/x-icon">
+<title>NIP.SYS · v3.0 (Clean & Native)</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="reset3.css">
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=JetBrains+Mono:wght@300;400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<div id="prog"></div>
+<canvas id="bg-canvas"></canvas>
+<div class="grain"></div>
 
-<div class="desktop">
+<nav id="nav">
+  <a href="#hero" class="nav-logo">
+    <div class="nav-logo-dot"></div>
+    NIP.SYS
+  </a>
+  <ul class="nav-links">
+    <li><a href="#projects" class="ru">Проекты</a><a href="#projects" class="en">Projects</a></li>
+    <li><a href="#skills"   class="ru">Навыки</a><a href="#skills" class="en">Skills</a></li>
+    <li><a href="#contact"  class="ru">Контакт</a><a href="#contact" class="en">Contact</a></li>
+  </ul>
+  <div class="lang-toggle">
+    <button class="lang-btn active" data-lang="ru">RU</button>
+    <button class="lang-btn" data-lang="en">EN</button>
+  </div>
+</nav>
 
-  <!-- TITLEBAR -->
-  <div class="titlebar">
-    <div class="titlebar-left">
-      <div class="win-btns">
-        <div class="wb wb-r"></div>
-        <div class="wb wb-o"></div>
-        <div class="wb wb-g"></div>
+<div class="page-nav" id="pageDots">
+  <div class="page-dot active" data-target="hero"></div>
+  <div class="page-dot" data-target="projects"></div>
+  <div class="page-dot" data-target="skills"></div>
+  <div class="page-dot" data-target="contact"></div>
+</div>
+
+<section id="hero">
+  <div class="hero-eyebrow">
+    <span class="ru">Веб-разработчик · Открыт к работе</span>
+    <span class="en">Web Developer · Open to Work</span>
+  </div>
+  <h1 class="hero-h1">
+    <span class="ru">Никита<span class="line2">Ипа<span class="grad">тов</span></span></span>
+    <span class="en">Nikita<span class="line2">Ipa<span class="grad">tov</span></span></span>
+  </h1>
+  <p class="hero-desc ru">Создаю интерфейсы, которые запоминаются.<br>HTML / CSS / JavaScript → React.<br>Russia → Belgrade → Europe.</p>
+  <p class="hero-desc en">I build interfaces that are remembered.<br>HTML / CSS / JavaScript → React.<br>Russia → Belgrade → Europe.</p>
+  <div class="hero-actions">
+    <a href="#projects" class="btn-primary"><span class="ru">Смотреть проекты</span><span class="en">View Projects</span><span>→</span></a>
+    <a href="#contact"  class="btn-ghost"><span class="ru">Связаться</span><span class="en">Contact</span></a>
+  </div>
+  <div class="hero-stats">
+    <div><div class="stat-num">6+</div><div class="stat-label ru">Проектов</div><div class="stat-label en">Projects</div></div>
+    <div><div class="stat-num">2</div><div class="stat-label ru">Года в коде</div><div class="stat-label en">Years coding</div></div>
+    <div><div class="stat-num">∞</div><div class="stat-label ru">Амбиций</div><div class="stat-label en">Ambitions</div></div>
+  </div>
+  <div class="scroll-hint"><div class="scroll-line"></div><span class="ru">Скролл</span><span class="en">Scroll</span></div>
+</section>
+
+<div class="hero-badge">
+  <div class="badge-dot"></div>
+  <span class="ru">Доступен к работе</span><span class="en">Available for work</span>
+</div>
+
+<section id="projects">
+  <div class="section-header reveal">
+    <div class="section-eyebrow"><span class="ru">Мои работы</span><span class="en">My Work</span></div>
+    <h2 class="section-title"><span class="ru">Про<span class="outline">екты</span></span><span class="en">Pro<span class="outline">jects</span></span></h2>
+  </div>
+  <div class="projects-grid" id="grid"></div>
+</section>
+
+<section id="skills">
+  <div class="section-header reveal">
+    <div class="section-eyebrow"><span class="ru">Технологии</span><span class="en">Technologies</span></div>
+    <h2 class="section-title"><span class="ru">На<span class="outline">выки</span></span><span class="en">Ski<span class="outline">lls</span></span></h2>
+  </div>
+  <div class="skills-layout">
+    <div class="skills-col reveal">
+      <div class="col-label"><span class="ru">Уровень владения</span><span class="en">Proficiency</span></div>
+      <div class="skill-item">
+        <div class="skill-top"><span class="skill-name">HTML &amp; CSS</span><span class="skill-pct">85%</span></div>
+        <div class="bar-track"><div class="bar-fill purple" data-w="85"></div></div>
+        <div class="skill-note ru">Верстка, адаптив, анимации, Figma</div>
+        <div class="skill-note en">Layout, responsive, animations, Figma</div>
       </div>
-      <span class="win-title">nip.sys — portfolio v3.0</span>
+      <div class="skill-item">
+        <div class="skill-top"><span class="skill-name">JavaScript</span><span class="skill-pct">15%</span></div>
+        <div class="bar-track"><div class="bar-fill blue" data-w="15"></div></div>
+        <div class="skill-note ru">DOM, события, алгоритмы, fetch</div>
+        <div class="skill-note en">DOM, events, algorithms, fetch</div>
+      </div>
+      <div class="skill-item">
+        <div class="skill-top"><span class="skill-name">Python / AI</span><span class="skill-pct">10%</span></div>
+        <div class="bar-track"><div class="bar-fill green" data-w="10"></div></div>
+        <div class="skill-note ru">Основы, в процессе</div>
+        <div class="skill-note en">Basics, in progress</div>
+      </div>
+      <div class="skill-item">
+        <div class="skill-top"><span class="skill-name">React.js</span><span class="skill-pct">0%</span></div>
+        <div class="bar-track"><div class="bar-fill blue" data-w="0"></div></div>
+        <div class="skill-note ru">Следующий этап</div><div class="skill-note en">Next step</div>
+      </div>
+      <div class="skill-item">
+        <div class="skill-top"><span class="skill-name">Node.js</span><span class="skill-pct">0%</span></div>
+        <div class="bar-track"><div class="bar-fill green" data-w="0"></div></div>
+        <div class="skill-note ru">В планах</div><div class="skill-note en">Planned</div>
+      </div>
     </div>
-    <div class="titlebar-center">RUSSIA · RU</div>
-    <div class="titlebar-right">
-      <div class="status-dot"></div>
-      <span id="clock">00:00:00</span>
+
+    <div class="skills-col reveal">
+      <div class="col-label">Roadmap</div>
+      <div class="roadmap-item"><div class="rm-icon done">✓</div><div><div class="rm-title">HTML &amp; CSS</div><div class="rm-sub ru">Верстка, Flexbox, Grid, анимации</div><div class="rm-sub en">Layout, Flexbox, Grid, animations</div></div><div class="rm-badge done"><span class="ru">Готово</span><span class="en">Done</span></div></div>
+      <div class="roadmap-item"><div class="rm-icon now">→</div><div><div class="rm-title">JavaScript</div><div class="rm-sub ru">DOM, события, async, API</div><div class="rm-sub en">DOM, events, async, API</div></div><div class="rm-badge active"><span class="ru">Сейчас</span><span class="en">Now</span></div></div>
+      <div class="roadmap-item"><div class="rm-icon now">→</div><div><div class="rm-title">Python</div><div class="rm-sub ru">Основы, скрипты, сети</div><div class="rm-sub en">Basics, scripts, networking</div></div><div class="rm-badge active"><span class="ru">Параллельно</span><span class="en">Parallel</span></div></div>
+      <div class="roadmap-item"><div class="rm-icon pending">○</div><div><div class="rm-title">React.js</div><div class="rm-sub ru">Компоненты, хуки, state</div><div class="rm-sub en">Components, hooks, state</div></div><div class="rm-badge soon"><span class="ru">Скоро</span><span class="en">Soon</span></div></div>
+      <div class="roadmap-item"><div class="rm-icon pending">○</div><div><div class="rm-title">Node.js + Backend</div><div class="rm-sub ru">API, базы данных, сервер</div><div class="rm-sub en">API, databases, server</div></div><div class="rm-badge soon"><span class="ru">В планах</span><span class="en">Planned</span></div></div>
+      <div class="roadmap-item"><div class="rm-icon pending">○</div><div><div class="rm-title"><span class="ru">Переезд в Европу</span><span class="en">Move to Europe</span></div><div class="rm-sub">Russia → Belgrade → EU</div></div><div class="rm-badge soon"><span class="ru">Цель</span><span class="en">Goal</span></div></div>
+    </div>
+  </div>
+  <div class="tools-row reveal">
+    <div class="col-label"><span class="ru">Инструменты</span><span class="en">Tools</span></div>
+    <div class="tools-grid">
+      <div class="tool-chip"><div class="tdot p"></div>VS Code</div>
+      <div class="tool-chip"><div class="tdot p"></div>Figma</div>
+      <div class="tool-chip"><div class="tdot b"></div>Git / GitHub</div>
+      <div class="tool-chip"><div class="tdot b"></div>Chrome DevTools</div>
+      <div class="tool-chip"><div class="tdot g"></div>macOS</div>
+      <div class="tool-chip"><div class="tdot g"></div>Ubuntu</div>
+      <div class="tool-chip"><div class="tdot m"></div>Claude AI</div>
+      <div class="tool-chip"><div class="tdot m"></div>Cursor</div>
+    </div>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="contact-left">
+    <div class="section-header reveal">
+      <div class="section-eyebrow"><span class="ru">Напишите мне</span><span class="en">Get in touch</span></div>
+      <h2 class="section-title"><span class="ru">Кон<span class="outline">такт</span></span><span class="en">Con<span class="outline">tact</span></span></h2>
+    </div>
+    <p class="contact-desc ru reveal">Открыт к предложениям о работе, фрилансу и сотрудничеству. Отвечаю быстро.</p>
+    <p class="contact-desc en reveal">Open to job offers, freelance and collaboration. I respond quickly.</p>
+    <div class="status-card reveal">
+      <div class="status-dot-green"></div>
+      <div class="status-text">Open to Work</div>
+    </div>
+    <div class="contact-links reveal">
+      <a href="https://t.me/ChrisRedfield48" target="_blank" class="contact-link">
+        <div class="cl-left"><div class="cl-icon">TG</div><div><div class="cl-title">Telegram</div><div class="cl-sub">t.me/ChrisRedfield48</div></div></div>
+        <span class="cl-arrow">→</span>
+      </a>
+      <a href="https://github.com/ChrisRedfield48" target="_blank" class="contact-link">
+        <div class="cl-left"><div class="cl-icon">GH</div><div><div class="cl-title">GitHub</div><div class="cl-sub">github.com/ChrisRedfield48</div></div></div>
+        <span class="cl-arrow">→</span>
+      </a>
     </div>
   </div>
 
-  <!-- SIDEBAR -->
-  <aside class="sidebar">
-    <div class="sidebar-header">
-      <div class="avatar-box">
-        <img src="image/изображение-Photoroom.png" alt="🦅" onerror="this.parentElement.textContent='🦅'">
-      </div>
-      <div class="sidebar-name">Никита Ип</div>
-      <div class="sidebar-role">Web Developer</div>
+  <div class="contact-right reveal">
+    <div class="info-block">
+      <div class="info-block-label"><span class="ru">Статус</span><span class="en">Status</span></div>
+      <div class="info-row-item"><span class="info-key ru">Доступность</span><span class="info-key en">Availability</span><span class="info-val green">Open to Work</span></div>
+      <div class="info-row-item"><span class="info-key ru">Локация</span><span class="info-key en">Location</span><span class="info-val">Russia → Belgrade</span></div>
+      <div class="info-row-item"><span class="info-key">Timezone</span><span class="info-val">UTC+3</span></div>
+      <div class="info-row-item"><span class="info-key ru">Формат</span><span class="info-key en">Format</span><span class="info-val ru">Удалённо</span><span class="info-val en">Remote</span></div>
+      <div class="info-row-item"><span class="info-key ru">Релокация</span><span class="info-key en">Relocation</span><span class="info-val accent ru">Планируется</span><span class="info-val accent en">Planned</span></div>
     </div>
+  </div>
+</section>
 
-    <nav class="sidebar-nav">
-      <a href="#stack" class="nav-item active"><span class="ni">01</span> Стек</a>
-      <a href="#projects" class="nav-item"><span class="ni">02</span> Проекты</a>
-      <a href="#roadmap" class="nav-item"><span class="ni">03</span> Roadmap</a>
-      <a href="#github" class="nav-item"><span class="ni">04</span> GitHub</a>
-      <a href="#infra" class="nav-item"><span class="ni">05</span> Инфра</a>
-      <a href="#contacts" class="nav-item"><span class="ni">06</span> Контакты</a>
-    </nav>
+<footer>
+  <span class="footer-copy">© 2026 NIP.SYS · CHRIS</span>
+  <span class="footer-code">↑↑↓↓←→←→BA</span>
+</footer>
 
-    <div class="sidebar-footer">
-      <a href="https://t.me/+QpzXesYhdSs1Mzcy" target="_blank" class="sb-btn">TG ↗</a>
-      <a href="https://github.com/ChrisRedfield48" target="_blank" class="sb-btn">GH ↗</a>
-    </div>
-  </aside>
-
-  <!-- MOBILE BOTTOM NAV -->
-  <nav class="mobile-nav">
-    <a href="#stack" class="mn-item active"><span class="mn-num">01</span><span>Стек</span></a>
-    <a href="#projects" class="mn-item"><span class="mn-num">02</span><span>Проекты</span></a>
-    <a href="#roadmap" class="mn-item"><span class="mn-num">03</span><span>Road</span></a>
-    <a href="#github" class="mn-item"><span class="mn-num">04</span><span>GitHub</span></a>
-    <a href="#infra" class="mn-item"><span class="mn-num">05</span><span>Инфра</span></a>
-    <a href="#contacts" class="mn-item"><span class="mn-num">06</span><span>Контакты</span></a>
-  </nav>
-
-  <!-- MAIN -->
-  <main class="main" id="main">
-
-    <!-- HERO -->
-    <div class="hero-panel">
-      <div class="hero-tagline">_ Доступен к работе</div>
-      <div class="hero-h1">Создаю<br>интерфейсы.</div>
-      <div class="hero-desc">Развиваю личные проекты, пишу код. Планирую трансфер в Европу. Open to Work.</div>
-      <div class="hero-badges">
-        <span class="badge hi">Web Dev</span>
-        <span class="badge">Open to Work</span>
-        <span class="badge">HTML / CSS</span>
-        <span class="badge">JavaScript</span>
-      </div>
-    </div>
-
-    <!-- STACK + ROADMAP -->
-    <div class="panel-row cols-2" id="stack">
-      <div class="panel reveal">
-        <div class="panel-label">Стек</div>
-        <div class="skill">
-          <div class="skill-top"><span>HTML / CSS / Figma</span><span class="skill-pct">85%</span></div>
-          <div class="bar-track"><div class="bar-fill" data-w="85"></div></div>
-        </div>
-        <div class="skill">
-          <div class="skill-top"><span>JavaScript</span><span class="skill-pct">15%</span></div>
-          <div class="bar-track"><div class="bar-fill" data-w="15"></div></div>
-        </div>
-        <div class="skill" style="margin-bottom:20px">
-          <div class="skill-top"><span>Python / AI</span><span class="skill-pct">10%</span></div>
-          <div class="bar-track"><div class="bar-fill" data-w="10"></div></div>
-        </div>
-        <div class="log-wrap">
-          <div class="log-line"><span class="log-t">09:14</span><span class="log-ok">✓</span><span>HTML/CSS — освоен</span></div>
-          <div class="log-line"><span class="log-t">сейчас</span><span class="log-acc">→</span><span>JavaScript — в процессе</span></div>
-          <div class="log-line"><span class="log-t">скоро</span><span class="log-warn">○</span><span>React, Node.js — ожидание</span></div>
-        </div>
-      </div>
-
-      <div class="panel reveal" id="roadmap">
-        <div class="panel-label">Roadmap</div>
-        <div class="rm-item done">
-          <span class="rm-check done">✓</span>
-          <span class="rm-label">HTML &amp; CSS</span>
-          <span class="rm-pct">85%</span>
-        </div>
-        <div class="rm-item">
-          <span class="rm-check">○</span>
-          <span class="rm-label">JavaScript</span>
-          <span class="rm-pct">15%</span>
-        </div>
-        <div class="rm-item">
-          <span class="rm-check">○</span>
-          <span class="rm-label">React.js</span>
-          <span class="rm-pct">0%</span>
-        </div>
-        <div class="rm-item">
-          <span class="rm-check">○</span>
-          <span class="rm-label">Python &amp; AI</span>
-          <span class="rm-pct">10%</span>
-        </div>
-        <div class="rm-item">
-          <span class="rm-check">○</span>
-          <span class="rm-label">Node.js</span>
-          <span class="rm-pct">0%</span>
-        </div>
-      </div>
-    </div>
-
-    <!-- PROJECTS -->
-    <div class="panel-row cols-1" id="projects">
-      <div class="panel reveal">
-        <div class="panel-label">Проекты</div>
-        <a href="https://chrisredfield48.github.io/graphic-designer/" target="_blank" class="proj">
-          <div>
-            <div class="proj-title">Graphic Designer</div>
-            <div class="proj-sub">chrisredfield48.github.io/graphic-designer</div>
-          </div>
-          <div style="display:flex;align-items:center;gap:8px">
-            <span class="proj-tag">UI</span>
-            <span class="proj-arrow">↗</span>
-          </div>
-        </a>
-        <a href="https://chrisredfield48.github.io/Cyberpunk/" target="_blank" class="proj">
-          <div>
-            <div class="proj-title">Cyberpunk Promo</div>
-            <div class="proj-sub">chrisredfield48.github.io/Cyberpunk</div>
-          </div>
-          <div style="display:flex;align-items:center;gap:8px">
-            <span class="proj-tag">Promo</span>
-            <span class="proj-arrow">↗</span>
-          </div>
-        </a>
-        <a href="https://chrisredfield48.github.io/Createx/" target="_blank" class="proj">
-          <div>
-            <div class="proj-title">Createx UI</div>
-            <div class="proj-sub">chrisredfield48.github.io/Createx</div>
-          </div>
-          <div style="display:flex;align-items:center;gap:8px">
-            <span class="proj-tag">UI Kit</span>
-            <span class="proj-arrow">↗</span>
-          </div>
-        </a>
-        <a href="https://chrisredfield48.github.io/Projects/" target="_blank" class="proj">
-          <div>
-            <div class="proj-title">Projects Hub</div>
-            <div class="proj-sub">chrisredfield48.github.io/Projects</div>
-          </div>
-          <div style="display:flex;align-items:center;gap:8px">
-            <span class="proj-tag">Hub</span>
-            <span class="proj-arrow">↗</span>
-          </div>
-        </a>
-        <a href="https://chrisredfield48.github.io/python/" target="_blank" class="proj">
-          <div>
-            <div class="proj-title">Python</div>
-            <div class="proj-sub">chrisredfield48.github.io/python</div>
-          </div>
-          <div style="display:flex;align-items:center;gap:8px">
-            <span class="proj-tag">Python</span>
-            <span class="proj-arrow">↗</span>
-          </div>
-        </a>
-        <a href="https://chrisredfield48.github.io" target="_blank" class="proj">
-          <div>
-            <div class="proj-title">NIP.SYS v3</div>
-            <div class="proj-sub">chrisredfield48.github.io</div>
-          </div>
-          <div style="display:flex;align-items:center;gap:8px">
-            <span class="proj-tag">Portfolio</span>
-            <span class="proj-arrow">↗</span>
-          </div>
-        </a>
-      </div>
-    </div>
-
-    <!-- GITHUB + INFRA -->
-    <div class="panel-row cols-2" id="github">
-      <div class="panel reveal">
-        <div class="panel-label">GitHub Stats</div>
-        <div style="display:flex;gap:8px;margin-bottom:16px">
-          <div class="gh-stat">
-            <span class="gh-num" id="gh-repos">—</span>
-            <span class="gh-lbl">Репозитории</span>
-          </div>
-          <div class="gh-stat">
-            <span class="gh-num" id="gh-followers">—</span>
-            <span class="gh-lbl">Подписчики</span>
-          </div>
-          <div class="gh-stat">
-            <span class="gh-num" id="gh-stars">—</span>
-            <span class="gh-lbl">Звёзды</span>
-          </div>
-        </div>
-        <a href="https://github.com/ChrisRedfield48" target="_blank" class="sb-btn" style="width:auto;padding:7px 12px;font-size:10px;">
-          github.com/ChrisRedfield48 ↗
-        </a>
-      </div>
-
-      <div class="panel reveal" id="infra">
-        <div class="panel-label">Инфраструктура</div>
-        <div class="infra-row">
-          <div class="infra-l"><div class="i-dot on"></div><span>MacBook Pro</span></div>
-          <span class="i-tag">Pro-series</span>
-        </div>
-        <div class="infra-row">
-          <div class="infra-l"><div class="i-dot on"></div><span>Custom PC</span></div>
-          <span class="i-tag">RTX Build</span>
-        </div>
-        <div class="infra-row">
-          <div class="infra-l"><div class="i-dot on"></div><span>VS Code + AI</span></div>
-          <span class="i-tag">Dev env</span>
-        </div>
-        <div class="infra-row">
-          <div class="infra-l"><div class="i-dot"></div><span>Homelab</span></div>
-          <span class="i-tag">Ubuntu/Docker</span>
-        </div>
-        <div class="infra-row">
-          <div class="infra-l"><div class="i-dot on"></div><span>Локация</span></div>
-          <span class="i-tag">Russia → Belgrade</span>
-        </div>
-      </div>
-    </div>
-
-    <!-- CONTACTS -->
-    <div class="panel-row cols-2" id="contacts">
-      <div class="panel reveal">
-        <div class="panel-label">Статус</div>
-        <div class="infra-row">
-          <div class="infra-l"><div class="i-dot on"></div><span>Open to Work</span></div>
-          <span class="i-tag">Доступен</span>
-        </div>
-        <div class="infra-row">
-          <div class="infra-l"><div class="i-dot on"></div><span>Локация</span></div>
-          <span class="i-tag">Russia → Belgrade</span>
-        </div>
-        <div class="infra-row">
-          <div class="infra-l"><div class="i-dot on"></div><span>Часовой пояс</span></div>
-          <span class="i-tag">UTC+3</span>
-        </div>
-        <div class="infra-row">
-          <div class="infra-l"><div class="i-dot"></div><span>Релокация</span></div>
-          <span class="i-tag">Планируется</span>
-        </div>
-      </div>
-
-      <div class="panel reveal">
-        <div class="panel-label">Связь</div>
-        <a href="https://t.me/+QpzXesYhdSs1Mzcy" target="_blank" class="contact-row">
-          <span class="contact-icon">TG</span>
-          <span class="contact-label">Telegram</span>
-          <span class="contact-arrow">↗</span>
-        </a>
-        <a href="https://github.com/ChrisRedfield48" target="_blank" class="contact-row">
-          <span class="contact-icon">GH</span>
-          <span class="contact-label">GitHub</span>
-          <span class="contact-arrow">↗</span>
-        </a>
-      </div>
-    </div>
-
-    <!-- FOOTER -->
-    <div style="padding: 16px 20px; border-top: 1px solid var(--border); display: flex; justify-content: space-between; align-items: center;">
-      <span style="font-family:var(--mono);font-size:10px;color:var(--muted)">NIP.SYS © 2026 · Белград → Европа</span>
-      <span style="font-family:var(--mono);font-size:9px;color:var(--muted);letter-spacing:2px;opacity:0.3">↑↑↓↓←→←→BA</span>
-    </div>
-
-  </main>
-
-</div>
-
-<div class="toast" id="toast"></div>
-
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
 <script src="script.js"></script>
 </body>
 </html>
