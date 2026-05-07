@@ -24,7 +24,7 @@ const projects = [
     ru: 'Предыдущая версия портфолио в стиле OS. Сайдбар, GitHub Stats.',
     en: 'Previous OS-style portfolio. Sidebar, GitHub Stats.',
     tags: ['HTML','CSS','JS'],
-    link: 'https://chrisredfield48.github.io',
+    link: 'https://chrisredfield48.github.io/nip.sys-v.02/',
     featured: true
   },
   {
